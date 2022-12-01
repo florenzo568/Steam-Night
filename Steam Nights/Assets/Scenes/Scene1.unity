@@ -363,6 +363,7 @@ GameObject:
   - component: {fileID: 591783261}
   - component: {fileID: 591783265}
   - component: {fileID: 591783266}
+  - component: {fileID: 591783267}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Player1
@@ -530,6 +531,20 @@ MonoBehaviour:
   Frames: {fileID: 1729598129}
   Punch: {fileID: 447072674}
   P2: {fileID: 1479626822}
+  P1GO: {fileID: 591783260}
+  P1: {fileID: 591783265}
+--- !u!114 &591783267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591783260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b17471c58d5f8ce4d9fe47a3cdf59f48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   P1: {fileID: 591783265}
 --- !u!1 &1479626822
 GameObject:
