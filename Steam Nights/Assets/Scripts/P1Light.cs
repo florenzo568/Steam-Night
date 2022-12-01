@@ -7,10 +7,13 @@ public class P1Light : MonoBehaviour
     public float StartUp;
     public float Active;
     public float Recovery;
+    public float Knockback;
     private SpriteRenderer Sprite;
     private BoxCollider2D HB;
     [SerializeField] FramesToSec Frames;
     [SerializeField] GameObject Punch;
+    [SerializeField] GameObject P2;
+    [SerializeField] GameObject P1GO;
     [SerializeField] P1Move P1;
     void Start()
     {
@@ -51,6 +54,8 @@ public class P1Light : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player2"))
         {
+            Rigidbody2D enemRB = P2.GetComponent<Rigidbody2D>();
+            enemRB.velocity = new Vector2(P1GO.transform.localScale.x * Knockback, Knockback);
             Debug.Log("Hit");
         }
     }
