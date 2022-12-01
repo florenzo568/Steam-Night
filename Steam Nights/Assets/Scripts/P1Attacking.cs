@@ -13,9 +13,17 @@ public class P1Attacking : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && P1.IsGrounded())
+        if (Input.GetButtonDown("Fire1") && P1.IsGrounded() && !Input.GetKey("s") && P1.canMove)
         {
             StartCoroutine(P1.GetComponent<P1Light>().Light());
+        }
+        if (Input.GetButtonDown("Fire1") && P1.IsGrounded() && Input.GetKey("s") && P1.canMove)
+        {
+            StartCoroutine(P1.GetComponent<P1DownLight>().Light());
+        }
+        if (Input.GetButtonDown("Fire1") && P1.IsGrounded() == false && P1.canMove)
+        {
+            StartCoroutine(P1.GetComponent<P1JumpLight>().Light());
         }
     }
 }

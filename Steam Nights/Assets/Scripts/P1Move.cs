@@ -69,7 +69,7 @@ public class P1Move : MonoBehaviour
         }
         else if (!canMove)
         {
-            rb.velocity = new Vector2(0, rb.velocity.y);
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y);
         }
 
     }

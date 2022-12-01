@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class P1Light : MonoBehaviour
+public class P1DownLight : MonoBehaviour
 {
     public float StartUp;
     public float Active;
@@ -40,7 +40,6 @@ public class P1Light : MonoBehaviour
         yield return new WaitForSeconds(Frames.Seconds(StartUp));
         Sprite.enabled = true;
         HB.enabled = true;
-        P1GO.GetComponent<Rigidbody2D>().AddForce(transform.right * Knockback * 2, ForceMode2D.Impulse);
         Debug.Log("Active");
         yield return new WaitForSeconds(Frames.Seconds(Active));
         Sprite.enabled = false;
@@ -53,10 +52,10 @@ public class P1Light : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.CompareTag("Player2"))
+        if (other.gameObject.CompareTag("Player2"))
         {
             Rigidbody2D enemRB = P2.GetComponent<Rigidbody2D>();
-            enemRB.AddForce(transform.right * Knockback, ForceMode2D.Impulse);
+            enemRB.velocity = new Vector2(0, Knockback);
             Debug.Log("Hit");
         }
     }
