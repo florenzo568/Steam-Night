@@ -40,7 +40,7 @@ public class P1Light : MonoBehaviour
         yield return new WaitForSeconds(Frames.Seconds(StartUp));
         Sprite.enabled = true;
         HB.enabled = true;
-        P1GO.GetComponent<Rigidbody2D>().AddForce(transform.right * Knockback * 2, ForceMode2D.Impulse);
+        P1GO.GetComponent<Rigidbody2D>().AddForce(P1GO.transform.localScale.x * transform.right * Knockback * 2, ForceMode2D.Impulse);
         Debug.Log("Active");
         yield return new WaitForSeconds(Frames.Seconds(Active));
         Sprite.enabled = false;
@@ -56,7 +56,7 @@ public class P1Light : MonoBehaviour
         if(other.gameObject.CompareTag("Player2"))
         {
             Rigidbody2D enemRB = P2.GetComponent<Rigidbody2D>();
-            enemRB.AddForce(transform.right * Knockback, ForceMode2D.Impulse);
+            enemRB.AddForce(P1GO.transform.localScale.x * transform.right * Knockback, ForceMode2D.Force);
             Debug.Log("Hit");
         }
     }

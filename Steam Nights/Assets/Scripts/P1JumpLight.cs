@@ -55,7 +55,7 @@ public class P1JumpLight : MonoBehaviour
         if (other.gameObject.CompareTag("Player2"))
         {
             Rigidbody2D enemRB = P2.GetComponent<Rigidbody2D>();
-            enemRB.velocity = new Vector2(P1GO.transform.localScale.x * Knockback, Knockback);
+            enemRB.AddForce(P1GO.transform.localScale.x * transform.right * Knockback, ForceMode2D.Force);
             Debug.Log("Hit");
         }
     }

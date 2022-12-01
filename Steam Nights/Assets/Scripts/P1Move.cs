@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class P1Move : MonoBehaviour
 {
-    private float horizontal;
+    public float horizontal;
     public float speed;
     public float JumpForce;
 
@@ -39,7 +39,7 @@ public class P1Move : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, JumpForce);
         }
 
-        if (Input.GetButtonDown("Dash") && canDash)
+        if (Input.GetButtonDown("Dash") && canDash && horizontal != 0)
         {
             StartCoroutine(Dash());
         }
