@@ -8,8 +8,9 @@ public class P1Move : MonoBehaviour
     public float speed;
     public float JumpForce;
 
-    private bool canDash = true;
+    public bool canDash = true;
     private bool isDashing;
+    public bool canMove = true;
     public float dashingPower;
     public float dashingTime;
     public float dashingCooldown;
@@ -17,6 +18,7 @@ public class P1Move : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private P1Turning Turn;
 
     void Start()
     {
@@ -41,6 +43,19 @@ public class P1Move : MonoBehaviour
         {
             StartCoroutine(Dash());
         }
+
+        if(Turn.Flip)
+        {
+            Vector3 lTemp = transform.localScale;
+            lTemp.x = -1;
+            transform.localScale = lTemp;
+        }
+        else if(!Turn.Flip)
+        {
+            Vector3 lTemp = transform.localScale;
+            lTemp.x = 1;
+            transform.localScale = lTemp;
+        }
     }
     private void FixedUpdate()
     {
@@ -48,7 +63,15 @@ public class P1Move : MonoBehaviour
         {
             return;
         }
-        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        if(canMove)
+        {
+            rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        }
+        else if (!canMove)
+        {
+            rb.velocity = new Vector2(0, rb.velocity.y);
+        }
+
     }
 
     private bool IsGrounded()
