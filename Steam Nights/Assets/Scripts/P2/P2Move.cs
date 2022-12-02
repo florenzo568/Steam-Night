@@ -14,7 +14,8 @@ public float horizontal;
     public float dashingPower;
     public float dashingTime;
     public float dashingCooldown;
-
+    
+    [SerializeField] P2Blocking P2B;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
@@ -63,11 +64,11 @@ public float horizontal;
         {
             return;
         }
-        if(canMove)
+        if(canMove && P2B.Blocking == false)
         {
             rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
         }
-        else if (!canMove)
+        else if (!canMove || P2B.Blocking == true)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y);
         }
