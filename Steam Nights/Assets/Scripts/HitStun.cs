@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class HitStun : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] P1Move P1;
+    [SerializeField] FramesToSec Sec;
     void Start()
     {
         
@@ -14,5 +15,12 @@ public class HitStun : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public IEnumerator Stun(float HS)
+    {
+        P1.canMove = false;
+        yield return new WaitForSeconds(Sec.Seconds(HS));
+        P1.canMove = true;
     }
 }
