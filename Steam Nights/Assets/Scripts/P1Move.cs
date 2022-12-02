@@ -34,7 +34,7 @@ public class P1Move : MonoBehaviour
         }
         horizontal = Input.GetAxisRaw("Horizontal");
 
-        if(Input.GetButtonDown("Jump") && IsGrounded())
+        if(Input.GetButtonDown("Jump") && IsGrounded() && canMove)
         {
             rb.velocity = new Vector2(rb.velocity.x, JumpForce);
         }
@@ -42,6 +42,14 @@ public class P1Move : MonoBehaviour
         if (Input.GetButtonDown("Dash") && canDash && horizontal != 0)
         {
             StartCoroutine(Dash());
+        }
+        if(Input.GetKeyDown("s") && IsGrounded())
+        {
+            canMove = false;
+        }
+        else if(Input.GetKeyUp("s") && IsGrounded())
+        {
+            canMove = true;
         }
 
         if(Turn.Flip)

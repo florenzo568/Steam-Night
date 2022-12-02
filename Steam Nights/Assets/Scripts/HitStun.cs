@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HitStun : MonoBehaviour
 {
-    [SerializeField] P1Move P1;
+    [SerializeField] P2Move P2;
     [SerializeField] FramesToSec Sec;
     void Start()
     {
@@ -19,8 +19,8 @@ public class HitStun : MonoBehaviour
 
     public IEnumerator Stun(float HS)
     {
-        P1.canMove = false;
+        P2.canMove = false;
         yield return new WaitForSeconds(Sec.Seconds(HS));
-        P1.canMove = true;
+        P2.canMove = true;
     }
 }

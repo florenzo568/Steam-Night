@@ -35,9 +35,17 @@ public float horizontal;
         }
         horizontal = Input.GetAxisRaw("Horizontal2");
 
-        if(Input.GetKeyDown("up") && IsGrounded())
+        if(Input.GetKeyDown("up") && IsGrounded() && canMove)
         {
             rb.velocity = new Vector2(rb.velocity.x, JumpForce);
+        }
+        if(Input.GetKeyDown("down") && IsGrounded())
+        {
+            canMove = false;
+        }
+        else if(Input.GetKeyUp("down") && IsGrounded())
+        {
+            canMove = true;
         }
 
         if (Input.GetButtonDown("Dash2") && canDash && horizontal != 0)

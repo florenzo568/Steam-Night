@@ -8,6 +8,7 @@ public class P1Light : MonoBehaviour
     public float Active;
     public float Recovery;
     public float Knockback;
+    public float HitStun;
     private SpriteRenderer Sprite;
     private BoxCollider2D HB;
     [SerializeField] FramesToSec Frames;
@@ -15,6 +16,8 @@ public class P1Light : MonoBehaviour
     [SerializeField] GameObject P2;
     [SerializeField] GameObject P1GO;
     [SerializeField] P1Move P1;
+    [SerializeField] P2Blocking P2B;
+    [SerializeField] HitStun HS;
     void Start()
     {
         Sprite = Punch.GetComponent<SpriteRenderer>();
@@ -53,10 +56,11 @@ public class P1Light : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.CompareTag("Player2"))
+        if(other.gameObject.CompareTag("Player2") && P2B.Blocking == false)
         {
             Rigidbody2D enemRB = P2.GetComponent<Rigidbody2D>();
             enemRB.AddForce(P1GO.transform.localScale.x * transform.right * Knockback, ForceMode2D.Force);
+            StartCoroutine(HS.Stun(HitStun));
             Debug.Log("Hit");
         }
     }
