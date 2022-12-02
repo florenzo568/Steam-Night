@@ -788,7 +788,7 @@ MonoBehaviour:
   Active: 3
   Recovery: 15
   Knockback: 2
-  HitStun: 60
+  HitStun: 12
   Frames: {fileID: 1729598129}
   Punch: {fileID: 447072674}
   P2: {fileID: 1479626822}
