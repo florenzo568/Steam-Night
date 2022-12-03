@@ -5,6 +5,7 @@ using UnityEngine;
 public class P1Blocking : MonoBehaviour
 {
     [SerializeField] P1Move P1;
+    public bool Blocking;
     void Start()
     {
         
@@ -13,9 +14,16 @@ public class P1Blocking : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButton("Dash") && P1.horizontal == 0 && P1.canMove)
+        if(P1.canMove == true)
         {
-            Debug.Log("Blocking");
+            if(Input.GetButton("Block"))
+            {
+                Blocking = true;
+            }
+            else
+            {
+                Blocking = false;
+            }
         }
     }
 }

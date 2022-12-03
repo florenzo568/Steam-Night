@@ -17,7 +17,7 @@ public class P1Attacking : MonoBehaviour
         {
             StartCoroutine(P1.GetComponent<P1Light>().Light());
         }
-        if (Input.GetButtonDown("Fire1") && P1.IsGrounded() && Input.GetKey("s") && P1.canMove)
+        if (Input.GetButtonDown("Fire1") && P1.IsGrounded() && Input.GetKey("s"))
         {
             StartCoroutine(P1.GetComponent<P1DownLight>().Light());
         }

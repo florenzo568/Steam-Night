@@ -11,6 +11,7 @@ public float horizontal;
     public bool canDash = true;
     private bool isDashing;
     public bool canMove = true;
+    public bool crouch;
     public float dashingPower;
     public float dashingTime;
     public float dashingCooldown;
@@ -41,11 +42,11 @@ public float horizontal;
         }
         if(Input.GetKeyDown("down") && IsGrounded())
         {
-            canMove = false;
+            crouch = true;
         }
         else if(Input.GetKeyUp("down") && IsGrounded())
         {
-            canMove = true;
+            crouch = false;
         }
 
         if (Input.GetButtonDown("Dash2") && canDash && horizontal != 0)
@@ -79,6 +80,10 @@ public float horizontal;
         else if (!canMove || P2B.Blocking == true)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y);
+        }
+        if(crouch)
+        {
+            rb.velocity = new Vector2(0, rb.velocity.y);
         }
 
     }
