@@ -41,5 +41,13 @@ public class P1Attacking : MonoBehaviour
         {
             StartCoroutine(P1.GetComponent<P1Heavy>().Heavy());
         }
+        if (Input.GetButtonDown("Fire3") && P1.IsGrounded() && Input.GetKey("s"))
+        {
+            StartCoroutine(P1.GetComponent<P1DownHeavy>().Heavy());
+        }
+        if (Input.GetButtonDown("Fire3") && P1.IsGrounded() == false && P1.canMove)
+        {
+            StartCoroutine(P1.GetComponent<P1JumpHeavy>().Heavy());
+        }
     }
 }
