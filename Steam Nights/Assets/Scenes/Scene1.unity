@@ -729,11 +729,12 @@ GameObject:
   - component: {fileID: 591783262}
   - component: {fileID: 591783261}
   - component: {fileID: 591783265}
-  - component: {fileID: 591783266}
   - component: {fileID: 591783267}
+  - component: {fileID: 591783270}
+  - component: {fileID: 591783277}
+  - component: {fileID: 591783266}
   - component: {fileID: 591783268}
   - component: {fileID: 591783269}
-  - component: {fileID: 591783270}
   - component: {fileID: 591783271}
   - component: {fileID: 591783272}
   - component: {fileID: 591783273}
@@ -910,6 +911,9 @@ MonoBehaviour:
   Recovery: 15
   Knockback: 6
   HitStun: 12
+  Damage: 24
+  MeterGain: 12
+  P2G: {fileID: 591783277}
   Frames: {fileID: 1729598129}
   Punch: {fileID: 447072674}
   P2: {fileID: 1479626822}
@@ -930,6 +934,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   P1: {fileID: 591783265}
+  P2H: {fileID: 0}
 --- !u!114 &591783268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -946,6 +951,9 @@ MonoBehaviour:
   Active: 3
   Recovery: 9
   Knockback: 2
+  Damage: 24
+  MeterGain: 12
+  P2G: {fileID: 591783277}
   Frames: {fileID: 1729598129}
   Punch: {fileID: 2023782619}
   P2: {fileID: 1479626822}
@@ -967,6 +975,9 @@ MonoBehaviour:
   Active: 3
   Recovery: 10
   Knockback: 7
+  Damage: 28
+  MeterGain: 14
+  P2G: {fileID: 591783277}
   Frames: {fileID: 1729598129}
   Punch: {fileID: 307783122}
   P2: {fileID: 1479626822}
@@ -1003,6 +1014,9 @@ MonoBehaviour:
   Recovery: 16
   Knockback: 7
   HitStun: 28
+  Damage: 34
+  MeterGain: 18
+  P2G: {fileID: 591783277}
   Frames: {fileID: 1729598129}
   Punch: {fileID: 1652292452}
   P2: {fileID: 1479626822}
@@ -1027,6 +1041,9 @@ MonoBehaviour:
   Recovery: 8
   Knockback: 12
   HitStun: 8
+  Damage: 34
+  MeterGain: 16
+  P2G: {fileID: 591783277}
   Frames: {fileID: 1729598129}
   Punch: {fileID: 102533870}
   P2: {fileID: 1479626822}
@@ -1051,6 +1068,9 @@ MonoBehaviour:
   Recovery: 18
   Knockback: 8
   HitStun: 24
+  Damage: 30
+  MeterGain: 16
+  P2G: {fileID: 591783277}
   Frames: {fileID: 1729598129}
   Punch: {fileID: 1981323736}
   P2: {fileID: 1479626822}
@@ -1075,6 +1095,9 @@ MonoBehaviour:
   Recovery: 25
   Knockback: 16
   HitStun: 30
+  Damage: 65
+  MeterGain: 16
+  P2G: {fileID: 591783277}
   Frames: {fileID: 1729598129}
   Punch: {fileID: 1702537228}
   P2: {fileID: 1479626822}
@@ -1099,6 +1122,9 @@ MonoBehaviour:
   Recovery: 23
   Knockback: 13
   HitStun: 40
+  Damage: 55
+  MeterGain: 18
+  P2G: {fileID: 591783277}
   Frames: {fileID: 1729598129}
   Punch: {fileID: 848337366}
   P2: {fileID: 1479626822}
@@ -1123,6 +1149,9 @@ MonoBehaviour:
   Recovery: 25
   Knockback: 8
   HitStun: 30
+  Damage: 60
+  MeterGain: 16
+  P2G: {fileID: 591783277}
   Frames: {fileID: 1729598129}
   Punch: {fileID: 1887200267}
   P2: {fileID: 1479626822}
@@ -1130,6 +1159,20 @@ MonoBehaviour:
   P1: {fileID: 591783265}
   P2B: {fileID: 1479626828}
   HS: {fileID: 1479626829}
+--- !u!114 &591783277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591783260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8963955dc38f6b14ca50996c8f37f8b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Steam: 0
+  Night: 0
 --- !u!1 &848337366
 GameObject:
   m_ObjectHideFlags: 0
@@ -1290,6 +1333,7 @@ GameObject:
   - component: {fileID: 1479626827}
   - component: {fileID: 1479626828}
   - component: {fileID: 1479626829}
+  - component: {fileID: 1479626830}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Player2
@@ -1469,6 +1513,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   P2: {fileID: 1479626827}
   Sec: {fileID: 1729598129}
+--- !u!114 &1479626830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479626822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 534d30844d72b9c48a20a60fd5209996, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 600
 --- !u!1 &1584545726
 GameObject:
   m_ObjectHideFlags: 0
