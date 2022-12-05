@@ -8,6 +8,9 @@ public class P1DownLight : MonoBehaviour
     public float Active;
     public float Recovery;
     public float Knockback;
+    public float Damage;
+    public float MeterGain;
+    [SerializeField] P1Gauge P2G;
     private SpriteRenderer Sprite;
     private BoxCollider2D HB;
     [SerializeField] FramesToSec Frames;
@@ -56,6 +59,7 @@ public class P1DownLight : MonoBehaviour
         {
             Rigidbody2D enemRB = P2.GetComponent<Rigidbody2D>();
             enemRB.velocity = new Vector2(0, Knockback);
+            P2G.Steam += MeterGain;
             Debug.Log("Hit");
         }
     }

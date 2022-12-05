@@ -8,6 +8,9 @@ public class P1JumpLight : MonoBehaviour
     public float Active;
     public float Recovery;
     public float Knockback;
+    public float Damage;
+    public float MeterGain;
+    [SerializeField] P1Gauge P2G;
     private SpriteRenderer Sprite;
     private BoxCollider2D HB;
     [SerializeField] FramesToSec Frames;
@@ -56,6 +59,7 @@ public class P1JumpLight : MonoBehaviour
         {
             Rigidbody2D enemRB = P2.GetComponent<Rigidbody2D>();
             enemRB.AddForce(P1GO.transform.localScale.x * transform.right * Knockback, ForceMode2D.Force);
+            P2G.Steam += MeterGain;
             Debug.Log("Hit");
         }
     }
