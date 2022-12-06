@@ -11,6 +11,7 @@ public float horizontal;
     public bool canDash = true;
     private bool isDashing;
     public bool canMove = true;
+    public bool Invul;
     public bool crouch;
     public bool DragP;
     public float DPTime;

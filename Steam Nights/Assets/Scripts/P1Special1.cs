@@ -9,6 +9,7 @@ public class P1Special1 : MonoBehaviour
     public float Recovery;
     public float Knockback;
     public float HitStun;
+    public float IFrames;
     public float Damage;
     public float MeterGain;
     [SerializeField] P1Gauge P2G;
@@ -40,6 +41,7 @@ public class P1Special1 : MonoBehaviour
 
     public IEnumerator Special()
     {
+        StartCoroutine("Invul");
         P1.canDash = false;
         P1.canMove = false;
         Debug.Log("StartUp");
@@ -56,6 +58,12 @@ public class P1Special1 : MonoBehaviour
         yield return new WaitForSeconds(Frames.Seconds(Recovery));
         P1.canDash = true;
         P1.canMove = true;
+    }
+    public IEnumerator Invul()
+    {
+        P1.Invul = true;
+        yield return new WaitForSeconds(Frames.Seconds(IFrames));
+        P1.Invul = false;
     }
 
     void OnTriggerEnter2D(Collider2D other)
