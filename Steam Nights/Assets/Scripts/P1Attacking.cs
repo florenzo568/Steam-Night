@@ -18,6 +18,10 @@ public class P1Attacking : MonoBehaviour
         if (Input.GetButton("Block") && Input.GetButtonDown("Fire1") && P1.IsGrounded() && P1B.Blocking == true && P1.crouch)
         {
             Debug.Log("Special Inate");
+            StartCoroutine(P1.GetComponent<P1Special1>().Special());
+            P2H.Health -= P1.GetComponent<P1Special1>().Damage;
+            P1B.Blocking = false;
+            P1.DragP = true;
         }
         if (Input.GetButton("Block") && Input.GetButtonDown("Fire1") && P1.IsGrounded() && P1B.Blocking == true && !P1.crouch)
         {

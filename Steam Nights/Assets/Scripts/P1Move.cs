@@ -12,6 +12,8 @@ public float horizontal;
     private bool isDashing;
     public bool canMove = true;
     public bool crouch;
+    public bool DragP;
+    public float DPTime;
     public float dashingPower;
     public float dashingTime;
     public float dashingCooldown;
@@ -66,6 +68,19 @@ public float horizontal;
             Vector3 lTemp = transform.localScale;
             lTemp.x = 1;
             transform.localScale = lTemp;
+        }
+        if(DragP == true)
+        {
+            if(IsGrounded())
+            {
+                DPTime -= Time.deltaTime;
+                if(DPTime <= 0)
+                {
+                    DragP = false;
+                    crouch = false;
+                    DPTime = .72f;
+                }
+            }
         }
     }
     private void FixedUpdate()
