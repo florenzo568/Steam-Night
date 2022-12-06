@@ -6,6 +6,7 @@ public class P1Attacking : MonoBehaviour
 {
     [SerializeField] P1Move P1;
     [SerializeField] P2Health P2H;
+    [SerializeField] P1Blocking P1B;
     void Start()
     {
         
@@ -14,12 +15,28 @@ public class P1Attacking : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && P1.IsGrounded() && !Input.GetKey("s") && P1.canMove)
+        if (Input.GetButton("Block") && Input.GetButtonDown("Fire1") && P1.IsGrounded() && P1B.Blocking == true && P1.crouch)
+        {
+            Debug.Log("Special Inate");
+        }
+        if (Input.GetButton("Block") && Input.GetButtonDown("Fire1") && P1.IsGrounded() && P1B.Blocking == true && !P1.crouch)
+        {
+            Debug.Log("Special 1");
+        }
+        if (Input.GetButton("Block") && Input.GetButtonDown("Fire2") && P1.IsGrounded() && P1B.Blocking == true)
+        {
+            Debug.Log("Special 2");
+        }
+        if (Input.GetButton("Block") && Input.GetButtonDown("Fire3") && P1.IsGrounded() && P1B.Blocking == true)
+        {
+            Debug.Log("Special 3");
+        }
+        if (Input.GetButtonDown("Fire1") && P1.IsGrounded() && !Input.GetKey("s") && P1.canMove && P1B.Blocking == false)
         {
             StartCoroutine(P1.GetComponent<P1Light>().Light());
             P2H.Health -= P1.GetComponent<P1Light>().Damage;
         }
-        if (Input.GetButtonDown("Fire1") && P1.IsGrounded() && Input.GetKey("s"))
+        if (Input.GetButtonDown("Fire1") && P1.IsGrounded() && Input.GetKey("s") && P1B.Blocking == false)
         {
             StartCoroutine(P1.GetComponent<P1DownLight>().Light());
             P2H.Health -= P1.GetComponent<P1DownLight>().Damage;
@@ -29,7 +46,7 @@ public class P1Attacking : MonoBehaviour
             StartCoroutine(P1.GetComponent<P1JumpLight>().Light());
             P2H.Health -= P1.GetComponent<P1JumpLight>().Damage;
         }
-        if (Input.GetButtonDown("Fire2") && P1.IsGrounded() && !Input.GetKey("s") && P1.canMove)
+        if (Input.GetButtonDown("Fire2") && P1.IsGrounded() && !Input.GetKey("s") && P1.canMove && P1B.Blocking == false)
         {
             StartCoroutine(P1.GetComponent<P1Medium>().Medium());
             P2H.Health -= P1.GetComponent<P1Medium>().Damage;
@@ -44,7 +61,7 @@ public class P1Attacking : MonoBehaviour
             StartCoroutine(P1.GetComponent<P1JumpMedium>().Medium());
             P2H.Health -= P1.GetComponent<P1JumpMedium>().Damage;
         }
-        if (Input.GetButtonDown("Fire3") && P1.IsGrounded() && !Input.GetKey("s") && P1.canMove)
+        if (Input.GetButtonDown("Fire3") && P1.IsGrounded() && !Input.GetKey("s") && P1.canMove && P1B.Blocking == false)
         {
             StartCoroutine(P1.GetComponent<P1Heavy>().Heavy());
             P2H.Health -= P1.GetComponent<P1Heavy>().Damage;

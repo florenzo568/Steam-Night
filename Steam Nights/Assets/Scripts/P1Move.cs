@@ -82,7 +82,7 @@ public float horizontal;
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y);
         }
-        if(crouch)
+        if(crouch || P1B.Blocking)
         {
             rb.velocity = new Vector2(0, rb.velocity.y);
         }
