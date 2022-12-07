@@ -17,23 +17,26 @@ public class P1Attacking : MonoBehaviour
     {
         if (Input.GetButton("Block") && Input.GetButtonDown("Fire1") && P1.IsGrounded() && P1B.Blocking == true && P1.crouch)
         {
-            Debug.Log("Special Inate");
+            Debug.Log("Special Innate");
             StartCoroutine(P1.GetComponent<P1Special1>().Special());
             P2H.Health -= P1.GetComponent<P1Special1>().Damage;
             P1B.Blocking = false;
             P1.DragP = true;
         }
-        if (Input.GetButton("Block") && Input.GetButtonDown("Fire1") && P1.IsGrounded() && P1B.Blocking == true && !P1.crouch)
-        {
-            Debug.Log("Special 1");
-        }
-        if (Input.GetButton("Block") && Input.GetButtonDown("Fire2") && P1.IsGrounded() && P1B.Blocking == true)
+        if (Input.GetButton("Block") && Input.GetButtonDown("Fire1") && P1.IsGrounded() && P1B.Blocking == true && !P1.crouch && P1.canMove)
         {
             Debug.Log("Special 2");
+            StartCoroutine(P1.GetComponent<P1Special2>().Special());
         }
-        if (Input.GetButton("Block") && Input.GetButtonDown("Fire3") && P1.IsGrounded() && P1B.Blocking == true)
+        if (Input.GetButton("Block") && Input.GetButtonDown("Fire2") && P1.IsGrounded() && P1B.Blocking == true && !P1.crouch && P1.canMove)
         {
             Debug.Log("Special 3");
+            StartCoroutine(P1.GetComponent<P1Special3>().Special());
+        }
+        if (Input.GetButton("Block") && Input.GetButtonDown("Fire3") && P1.IsGrounded() && P1B.Blocking == true && !P1.crouch && P1.canMove)
+        {
+            Debug.Log("Special 4");
+            StartCoroutine(P1.GetComponent<P1Special4>().Special());
         }
         if (Input.GetButtonDown("Fire1") && P1.IsGrounded() && !Input.GetKey("s") && P1.canMove && P1B.Blocking == false)
         {
