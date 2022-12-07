@@ -28,11 +28,12 @@ public class P1Attacking : MonoBehaviour
             Debug.Log("Special 1");
             StartCoroutine(P1.GetComponent<P1Special2>().Special());
         }
-        if (Input.GetButton("Block") && Input.GetButtonDown("Fire2") && P1.IsGrounded() && P1B.Blocking == true)
+        if (Input.GetButton("Block") && Input.GetButtonDown("Fire2") && P1.IsGrounded() && P1B.Blocking == true && !P1.crouch && P1.canMove)
         {
             Debug.Log("Special 2");
+            StartCoroutine(P1.GetComponent<P1Special3>().Special());
         }
-        if (Input.GetButton("Block") && Input.GetButtonDown("Fire3") && P1.IsGrounded() && P1B.Blocking == true)
+        if (Input.GetButton("Block") && Input.GetButtonDown("Fire3") && P1.IsGrounded() && P1B.Blocking == true && !P1.crouch && P1.canMove)
         {
             Debug.Log("Special 3");
         }

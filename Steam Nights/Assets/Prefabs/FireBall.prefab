@@ -125,5 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player1: {fileID: 0}
+  P2H: {fileID: 0}
   Speed: 0.075
+  Damage: 40
   Life: 2
