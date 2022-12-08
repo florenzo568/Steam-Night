@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 102533873}
   - component: {fileID: 102533872}
   - component: {fileID: 102533871}
+  - component: {fileID: 102533874}
   m_Layer: 0
   m_Name: Medium Down
   m_TagString: Untagged
@@ -234,6 +235,34 @@ Transform:
   m_Father: {fileID: 1909557918}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &102533874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102533870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f96ea460c3900224aaffb881457944be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartUp: 12
+  Active: 3
+  Recovery: 8
+  Knockback: 12
+  HitStun: 8
+  Damage: 34
+  MeterGain: 16
+  P2G: {fileID: 591783277}
+  Frames: {fileID: 1729598129}
+  P2H: {fileID: 1479626830}
+  Punch: {fileID: 102533870}
+  P2: {fileID: 1479626822}
+  P1GO: {fileID: 591783260}
+  P1: {fileID: 591783265}
+  P2B: {fileID: 1479626828}
+  HS: {fileID: 1479626829}
 --- !u!1 &235218480
 GameObject:
   m_ObjectHideFlags: 0
@@ -245,6 +274,7 @@ GameObject:
   - component: {fileID: 235218483}
   - component: {fileID: 235218482}
   - component: {fileID: 235218481}
+  - component: {fileID: 235218484}
   m_Layer: 0
   m_Name: Special4
   m_TagString: Untagged
@@ -345,6 +375,35 @@ Transform:
   m_Father: {fileID: 640876009}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &235218484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235218480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a278ecfcfe7060646a3440335ce74689, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartUp: 32
+  Active: 8
+  Recovery: 25
+  Knockback: 20
+  HitStun: 90
+  Damage: 150
+  MeterGain: 0
+  P2G: {fileID: 591783277}
+  HB: {fileID: 235218481}
+  Frames: {fileID: 1729598129}
+  P2H: {fileID: 1479626830}
+  Punch1: {fileID: 235218480}
+  P2: {fileID: 1479626822}
+  P1GO: {fileID: 591783260}
+  P1: {fileID: 591783265}
+  P2B: {fileID: 1479626828}
+  HS: {fileID: 1479626829}
 --- !u!1 &307783122
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,6 +415,7 @@ GameObject:
   - component: {fileID: 307783125}
   - component: {fileID: 307783124}
   - component: {fileID: 307783123}
+  - component: {fileID: 307783126}
   m_Layer: 0
   m_Name: DownLight
   m_TagString: Untagged
@@ -456,6 +516,31 @@ Transform:
   m_Father: {fileID: 583637891}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &307783126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307783122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ff2e14739e4bec48b283365ecef0e87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartUp: 6
+  Active: 3
+  Recovery: 10
+  Knockback: 7
+  Damage: 28
+  MeterGain: 14
+  P2G: {fileID: 591783277}
+  Frames: {fileID: 1729598129}
+  P2H: {fileID: 1479626830}
+  Punch: {fileID: 307783122}
+  P2: {fileID: 1479626822}
+  P1GO: {fileID: 591783260}
+  P1: {fileID: 591783265}
 --- !u!1 &405855211
 GameObject:
   m_ObjectHideFlags: 0
@@ -578,6 +663,7 @@ GameObject:
   - component: {fileID: 447072675}
   - component: {fileID: 447072676}
   - component: {fileID: 447072677}
+  - component: {fileID: 447072678}
   m_Layer: 0
   m_Name: Light Neutral
   m_TagString: Untagged
@@ -678,6 +764,34 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &447072678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447072674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 413e85535fc30aa4aaf2aa69cdef9bff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartUp: 6
+  Active: 3
+  Recovery: 15
+  Knockback: 6
+  HitStun: 12
+  Damage: 24
+  MeterGain: 12
+  P2G: {fileID: 591783277}
+  Frames: {fileID: 1729598129}
+  P2H: {fileID: 1479626830}
+  Punch: {fileID: 447072674}
+  P2: {fileID: 1479626822}
+  P1GO: {fileID: 591783260}
+  P1: {fileID: 591783265}
+  P2B: {fileID: 1479626828}
+  HS: {fileID: 1479626829}
 --- !u!1 &456092437
 GameObject:
   m_ObjectHideFlags: 0
@@ -843,19 +957,8 @@ GameObject:
   - component: {fileID: 591783267}
   - component: {fileID: 591783270}
   - component: {fileID: 591783277}
-  - component: {fileID: 591783266}
-  - component: {fileID: 591783268}
-  - component: {fileID: 591783269}
-  - component: {fileID: 591783271}
-  - component: {fileID: 591783272}
-  - component: {fileID: 591783273}
-  - component: {fileID: 591783274}
-  - component: {fileID: 591783275}
-  - component: {fileID: 591783276}
-  - component: {fileID: 591783278}
   - component: {fileID: 591783279}
   - component: {fileID: 591783280}
-  - component: {fileID: 591783281}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Player1
@@ -1013,34 +1116,6 @@ MonoBehaviour:
     m_Bits: 8
   Turn: {fileID: 1729598127}
   P1B: {fileID: 591783270}
---- !u!114 &591783266
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 591783260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 413e85535fc30aa4aaf2aa69cdef9bff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StartUp: 6
-  Active: 3
-  Recovery: 15
-  Knockback: 6
-  HitStun: 12
-  Damage: 24
-  MeterGain: 12
-  P2G: {fileID: 591783277}
-  Frames: {fileID: 1729598129}
-  P2H: {fileID: 1479626830}
-  Punch: {fileID: 447072674}
-  P2: {fileID: 1479626822}
-  P1GO: {fileID: 591783260}
-  P1: {fileID: 591783265}
-  P2B: {fileID: 1479626828}
-  HS: {fileID: 1479626829}
 --- !u!114 &591783267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1056,56 +1131,17 @@ MonoBehaviour:
   P1: {fileID: 591783265}
   P2H: {fileID: 1479626830}
   P1B: {fileID: 591783270}
---- !u!114 &591783268
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 591783260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db2a4da5bcc85df4694d167810a8c144, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StartUp: 6
-  Active: 3
-  Recovery: 9
-  Knockback: 2
-  Damage: 24
-  MeterGain: 12
-  P2G: {fileID: 591783277}
-  Frames: {fileID: 1729598129}
-  P2H: {fileID: 0}
-  Punch: {fileID: 2023782619}
-  P2: {fileID: 1479626822}
-  P1GO: {fileID: 591783260}
-  P1: {fileID: 591783265}
---- !u!114 &591783269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 591783260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ff2e14739e4bec48b283365ecef0e87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StartUp: 6
-  Active: 3
-  Recovery: 10
-  Knockback: 7
-  Damage: 28
-  MeterGain: 14
-  P2G: {fileID: 591783277}
-  Frames: {fileID: 1729598129}
-  P2H: {fileID: 0}
-  Punch: {fileID: 307783122}
-  P2: {fileID: 1479626822}
-  P1GO: {fileID: 591783260}
-  P1: {fileID: 591783265}
+  P1L: {fileID: 447072678}
+  P1DL: {fileID: 307783126}
+  P1JL: {fileID: 2023782623}
+  P1M: {fileID: 1652292456}
+  P1DM: {fileID: 102533874}
+  P1JM: {fileID: 1981323740}
+  P1H: {fileID: 1702537232}
+  P1DH: {fileID: 848337370}
+  P1JH: {fileID: 1887200271}
+  P1S1: {fileID: 1559013302}
+  P1S4: {fileID: 235218484}
 --- !u!114 &591783270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1120,174 +1156,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   P1: {fileID: 591783265}
   Blocking: 0
---- !u!114 &591783271
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 591783260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 019d922dbe70e4b41ae96a0168284dd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StartUp: 12
-  Active: 5
-  Recovery: 16
-  Knockback: 7
-  HitStun: 28
-  Damage: 34
-  MeterGain: 18
-  P2G: {fileID: 591783277}
-  Frames: {fileID: 1729598129}
-  P2H: {fileID: 0}
-  Punch: {fileID: 1652292452}
-  P2: {fileID: 1479626822}
-  P1GO: {fileID: 591783260}
-  P1: {fileID: 591783265}
-  P2B: {fileID: 1479626828}
-  HS: {fileID: 1479626829}
---- !u!114 &591783272
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 591783260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f96ea460c3900224aaffb881457944be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StartUp: 12
-  Active: 3
-  Recovery: 8
-  Knockback: 12
-  HitStun: 8
-  Damage: 34
-  MeterGain: 16
-  P2G: {fileID: 591783277}
-  Frames: {fileID: 1729598129}
-  P2H: {fileID: 0}
-  Punch: {fileID: 102533870}
-  P2: {fileID: 1479626822}
-  P1GO: {fileID: 591783260}
-  P1: {fileID: 591783265}
-  P2B: {fileID: 1479626828}
-  HS: {fileID: 1479626829}
---- !u!114 &591783273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 591783260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e61632fe28707734880766c4c81099ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StartUp: 10
-  Active: 4
-  Recovery: 18
-  Knockback: 8
-  HitStun: 24
-  Damage: 30
-  MeterGain: 16
-  P2G: {fileID: 591783277}
-  Frames: {fileID: 1729598129}
-  P2H: {fileID: 0}
-  Punch: {fileID: 1981323736}
-  P2: {fileID: 1479626822}
-  P1GO: {fileID: 591783260}
-  P1: {fileID: 591783265}
-  P2B: {fileID: 1479626828}
-  HS: {fileID: 1479626829}
---- !u!114 &591783274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 591783260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b43c51d5cf158bc4492a432e0b136e31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StartUp: 15
-  Active: 6
-  Recovery: 25
-  Knockback: 16
-  HitStun: 30
-  Damage: 65
-  MeterGain: 16
-  P2G: {fileID: 591783277}
-  Frames: {fileID: 1729598129}
-  P2H: {fileID: 0}
-  Punch: {fileID: 1702537228}
-  P2: {fileID: 1479626822}
-  P1GO: {fileID: 591783260}
-  P1: {fileID: 591783265}
-  P2B: {fileID: 1479626828}
-  HS: {fileID: 1479626829}
---- !u!114 &591783275
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 591783260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a97d1bc8a6e9e2c4bbedde49e56e3d6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StartUp: 12
-  Active: 4
-  Recovery: 23
-  Knockback: 13
-  HitStun: 40
-  Damage: 55
-  MeterGain: 18
-  P2G: {fileID: 591783277}
-  Frames: {fileID: 1729598129}
-  P2H: {fileID: 0}
-  Punch: {fileID: 848337366}
-  P2: {fileID: 1479626822}
-  P1GO: {fileID: 591783260}
-  P1: {fileID: 591783265}
-  P2B: {fileID: 1479626828}
-  HS: {fileID: 1479626829}
---- !u!114 &591783276
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 591783260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79b7421c8ee9992488a070bb40419ddb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StartUp: 15
-  Active: 6
-  Recovery: 25
-  Knockback: 8
-  HitStun: 30
-  Damage: 60
-  MeterGain: 16
-  P2G: {fileID: 591783277}
-  Frames: {fileID: 1729598129}
-  P2H: {fileID: 0}
-  Punch: {fileID: 1887200267}
-  P2: {fileID: 1479626822}
-  P1GO: {fileID: 591783260}
-  P1: {fileID: 591783265}
-  P2B: {fileID: 1479626828}
-  HS: {fileID: 1479626829}
 --- !u!114 &591783277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1302,35 +1170,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Steam: 0
   Night: 0
---- !u!114 &591783278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 591783260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a3981733545d764e8cac2aafffcbc66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StartUp: 11
-  Active: 5
-  Recovery: 43
-  Knockback: 12
-  HitStun: 70
-  IFrames: 16
-  Damage: 90
-  MeterGain: 50
-  P2G: {fileID: 591783277}
-  Frames: {fileID: 1729598129}
-  P2H: {fileID: 0}
-  Punch: {fileID: 1559013298}
-  P2: {fileID: 1479626822}
-  P1GO: {fileID: 591783260}
-  P1: {fileID: 591783265}
-  P2B: {fileID: 1479626828}
-  HS: {fileID: 1479626829}
 --- !u!114 &591783279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1376,35 +1215,6 @@ MonoBehaviour:
   Frames: {fileID: 1729598129}
   FirePoint: {fileID: 1287502066}
   FireBall: {fileID: 5511064219461614722, guid: 70a3ba4fc5b13f540928a29dd4df7372, type: 3}
-  P2: {fileID: 1479626822}
-  P1GO: {fileID: 591783260}
-  P1: {fileID: 591783265}
-  P2B: {fileID: 1479626828}
-  HS: {fileID: 1479626829}
---- !u!114 &591783281
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 591783260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a278ecfcfe7060646a3440335ce74689, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StartUp: 32
-  Active: 8
-  Recovery: 25
-  Knockback: 20
-  HitStun: 90
-  Damage: 150
-  MeterGain: 0
-  P2G: {fileID: 591783277}
-  HB: {fileID: 0}
-  Frames: {fileID: 1729598129}
-  P2H: {fileID: 0}
-  Punch1: {fileID: 0}
   P2: {fileID: 1479626822}
   P1GO: {fileID: 591783260}
   P1: {fileID: 591783265}
@@ -1523,6 +1333,7 @@ GameObject:
   - component: {fileID: 848337369}
   - component: {fileID: 848337368}
   - component: {fileID: 848337367}
+  - component: {fileID: 848337370}
   m_Layer: 0
   m_Name: HeavyDown
   m_TagString: Untagged
@@ -1623,6 +1434,34 @@ Transform:
   m_Father: {fileID: 1164553696}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &848337370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848337366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a97d1bc8a6e9e2c4bbedde49e56e3d6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartUp: 12
+  Active: 4
+  Recovery: 23
+  Knockback: 13
+  HitStun: 40
+  Damage: 55
+  MeterGain: 18
+  P2G: {fileID: 591783277}
+  Frames: {fileID: 1729598129}
+  P2H: {fileID: 1479626830}
+  Punch: {fileID: 848337366}
+  P2: {fileID: 1479626822}
+  P1GO: {fileID: 591783260}
+  P1: {fileID: 591783265}
+  P2B: {fileID: 1479626828}
+  HS: {fileID: 1479626829}
 --- !u!1 &1164553695
 GameObject:
   m_ObjectHideFlags: 0
@@ -1907,6 +1746,7 @@ GameObject:
   - component: {fileID: 1559013301}
   - component: {fileID: 1559013300}
   - component: {fileID: 1559013299}
+  - component: {fileID: 1559013302}
   m_Layer: 0
   m_Name: Special1
   m_TagString: Untagged
@@ -2007,6 +1847,35 @@ Transform:
   m_Father: {fileID: 640876009}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1559013302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559013298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a3981733545d764e8cac2aafffcbc66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartUp: 11
+  Active: 5
+  Recovery: 43
+  Knockback: 12
+  HitStun: 70
+  IFrames: 16
+  Damage: 90
+  MeterGain: 50
+  P2G: {fileID: 591783277}
+  Frames: {fileID: 1729598129}
+  P2H: {fileID: 1479626830}
+  Punch: {fileID: 1559013298}
+  P2: {fileID: 1479626822}
+  P1GO: {fileID: 591783260}
+  P1: {fileID: 591783265}
+  P2B: {fileID: 1479626828}
+  HS: {fileID: 1479626829}
 --- !u!1 &1584545726
 GameObject:
   m_ObjectHideFlags: 0
@@ -2129,6 +1998,7 @@ GameObject:
   - component: {fileID: 1652292454}
   - component: {fileID: 1652292453}
   - component: {fileID: 1652292455}
+  - component: {fileID: 1652292456}
   m_Layer: 0
   m_Name: Medium
   m_TagString: Untagged
@@ -2229,6 +2099,34 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1652292456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652292452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 019d922dbe70e4b41ae96a0168284dd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartUp: 12
+  Active: 5
+  Recovery: 16
+  Knockback: 7
+  HitStun: 28
+  Damage: 34
+  MeterGain: 18
+  P2G: {fileID: 591783277}
+  Frames: {fileID: 1729598129}
+  P2H: {fileID: 1479626830}
+  Punch: {fileID: 1652292452}
+  P2: {fileID: 1479626822}
+  P1GO: {fileID: 591783260}
+  P1: {fileID: 591783265}
+  P2B: {fileID: 1479626828}
+  HS: {fileID: 1479626829}
 --- !u!1 &1692493504
 GameObject:
   m_ObjectHideFlags: 0
@@ -2271,6 +2169,7 @@ GameObject:
   - component: {fileID: 1702537231}
   - component: {fileID: 1702537230}
   - component: {fileID: 1702537229}
+  - component: {fileID: 1702537232}
   m_Layer: 0
   m_Name: HeavyStand
   m_TagString: Untagged
@@ -2371,6 +2270,34 @@ Transform:
   m_Father: {fileID: 1164553696}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1702537232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702537228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b43c51d5cf158bc4492a432e0b136e31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartUp: 15
+  Active: 6
+  Recovery: 25
+  Knockback: 16
+  HitStun: 30
+  Damage: 65
+  MeterGain: 16
+  P2G: {fileID: 591783277}
+  Frames: {fileID: 1729598129}
+  P2H: {fileID: 1479626830}
+  Punch: {fileID: 1702537228}
+  P2: {fileID: 1479626822}
+  P1GO: {fileID: 591783260}
+  P1: {fileID: 591783265}
+  P2B: {fileID: 1479626828}
+  HS: {fileID: 1479626829}
 --- !u!1 &1729598126
 GameObject:
   m_ObjectHideFlags: 0
@@ -2442,6 +2369,7 @@ GameObject:
   - component: {fileID: 1887200270}
   - component: {fileID: 1887200269}
   - component: {fileID: 1887200268}
+  - component: {fileID: 1887200271}
   m_Layer: 0
   m_Name: HeavyJump
   m_TagString: Untagged
@@ -2542,6 +2470,34 @@ Transform:
   m_Father: {fileID: 1164553696}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1887200271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1887200267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79b7421c8ee9992488a070bb40419ddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartUp: 15
+  Active: 6
+  Recovery: 25
+  Knockback: 8
+  HitStun: 30
+  Damage: 60
+  MeterGain: 16
+  P2G: {fileID: 591783277}
+  Frames: {fileID: 1729598129}
+  P2H: {fileID: 1479626830}
+  Punch: {fileID: 1887200267}
+  P2: {fileID: 1479626822}
+  P1GO: {fileID: 591783260}
+  P1: {fileID: 591783265}
+  P2B: {fileID: 1479626828}
+  HS: {fileID: 1479626829}
 --- !u!1 &1909557917
 GameObject:
   m_ObjectHideFlags: 0
@@ -2587,6 +2543,7 @@ GameObject:
   - component: {fileID: 1981323739}
   - component: {fileID: 1981323738}
   - component: {fileID: 1981323737}
+  - component: {fileID: 1981323740}
   m_Layer: 0
   m_Name: Medium Jump
   m_TagString: Untagged
@@ -2687,6 +2644,34 @@ Transform:
   m_Father: {fileID: 1909557918}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -24.223}
+--- !u!114 &1981323740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981323736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e61632fe28707734880766c4c81099ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartUp: 10
+  Active: 4
+  Recovery: 18
+  Knockback: 8
+  HitStun: 24
+  Damage: 30
+  MeterGain: 16
+  P2G: {fileID: 591783277}
+  Frames: {fileID: 1729598129}
+  P2H: {fileID: 1479626830}
+  Punch: {fileID: 1981323736}
+  P2: {fileID: 1479626822}
+  P1GO: {fileID: 591783260}
+  P1: {fileID: 591783265}
+  P2B: {fileID: 1479626828}
+  HS: {fileID: 1479626829}
 --- !u!1 &2023782619
 GameObject:
   m_ObjectHideFlags: 0
@@ -2698,6 +2683,7 @@ GameObject:
   - component: {fileID: 2023782620}
   - component: {fileID: 2023782621}
   - component: {fileID: 2023782622}
+  - component: {fileID: 2023782623}
   m_Layer: 0
   m_Name: Jump Light
   m_TagString: Untagged
@@ -2798,3 +2784,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2023782623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023782619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db2a4da5bcc85df4694d167810a8c144, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartUp: 6
+  Active: 3
+  Recovery: 9
+  Knockback: 2
+  Damage: 24
+  MeterGain: 12
+  P2G: {fileID: 591783277}
+  Frames: {fileID: 1729598129}
+  P2H: {fileID: 1479626830}
+  Punch: {fileID: 2023782619}
+  P2: {fileID: 1479626822}
+  P1GO: {fileID: 591783260}
+  P1: {fileID: 591783265}
