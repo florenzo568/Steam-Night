@@ -14,6 +14,7 @@ public class P1JumpLight : MonoBehaviour
     private SpriteRenderer Sprite;
     private BoxCollider2D HB;
     [SerializeField] FramesToSec Frames;
+    [SerializeField] P2Health P2H;
     [SerializeField] GameObject Punch;
     [SerializeField] GameObject P2;
     [SerializeField] GameObject P1GO;
@@ -59,6 +60,7 @@ public class P1JumpLight : MonoBehaviour
         {
             Rigidbody2D enemRB = P2.GetComponent<Rigidbody2D>();
             enemRB.AddForce(P1GO.transform.localScale.x * transform.right * Knockback, ForceMode2D.Force);
+            P2H.Health -= Damage;
             P2G.Steam += MeterGain;
             Debug.Log("Hit");
         }

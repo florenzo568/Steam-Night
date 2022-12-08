@@ -13,9 +13,10 @@ public float StartUp;
     public float MeterGain;
     [SerializeField] P1Gauge P2G;
     private SpriteRenderer Sprite;
-    private BoxCollider2D HB;
+    public BoxCollider2D HB;
     [SerializeField] FramesToSec Frames;
-    [SerializeField] GameObject Punch;
+    [SerializeField] P2Health P2H;
+    [SerializeField] GameObject Punch1;
     [SerializeField] GameObject P2;
     [SerializeField] GameObject P1GO;
     [SerializeField] P1Move P1;
@@ -23,9 +24,8 @@ public float StartUp;
     [SerializeField] HitStun HS;
     void Start()
     {
-        Sprite = Punch.GetComponent<SpriteRenderer>();
+        Sprite = Punch1.GetComponent<SpriteRenderer>();
         Sprite.enabled = false;
-        HB = Punch.GetComponent<BoxCollider2D>();
         HB.enabled = false;
     }
 
@@ -62,6 +62,7 @@ public float StartUp;
         {
             Rigidbody2D enemRB = P2.GetComponent<Rigidbody2D>();
             enemRB.AddForce(P1GO.transform.localScale.x * transform.right * Knockback, ForceMode2D.Force);
+            P2H.Health -= Damage;
             P2G.Steam += MeterGain;
             StartCoroutine(HS.Stun(HitStun));
             Debug.Log("Hit");

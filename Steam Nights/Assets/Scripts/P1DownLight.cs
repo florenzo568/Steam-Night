@@ -14,6 +14,7 @@ public class P1DownLight : MonoBehaviour
     private SpriteRenderer Sprite;
     private BoxCollider2D HB;
     [SerializeField] FramesToSec Frames;
+    [SerializeField] P2Health P2H;
     [SerializeField] GameObject Punch;
     [SerializeField] GameObject P2;
     [SerializeField] GameObject P1GO;
@@ -58,6 +59,7 @@ public class P1DownLight : MonoBehaviour
         if (other.gameObject.CompareTag("Player2"))
         {
             Rigidbody2D enemRB = P2.GetComponent<Rigidbody2D>();
+            P2H.Health -= Damage;
             enemRB.velocity = new Vector2(0, Knockback);
             P2G.Steam += MeterGain;
             Debug.Log("Hit");
