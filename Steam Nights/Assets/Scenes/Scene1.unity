@@ -390,7 +390,7 @@ MonoBehaviour:
   StartUp: 32
   Active: 8
   Recovery: 25
-  Knockback: 20
+  Knockback: 12
   HitStun: 90
   Damage: 150
   MeterGain: 0
@@ -534,6 +534,7 @@ MonoBehaviour:
   Knockback: 7
   Damage: 28
   MeterGain: 14
+  HitStun: 8
   P2G: {fileID: 591783277}
   Frames: {fileID: 1729598129}
   P2H: {fileID: 1479626830}
@@ -541,6 +542,7 @@ MonoBehaviour:
   P2: {fileID: 1479626822}
   P1GO: {fileID: 591783260}
   P1: {fileID: 591783265}
+  HS: {fileID: 0}
 --- !u!1 &405855211
 GameObject:
   m_ObjectHideFlags: 0
@@ -2802,6 +2804,7 @@ MonoBehaviour:
   Knockback: 2
   Damage: 24
   MeterGain: 12
+  HitStun: 18
   P2G: {fileID: 591783277}
   Frames: {fileID: 1729598129}
   P2H: {fileID: 1479626830}
@@ -2809,3 +2812,4 @@ MonoBehaviour:
   P2: {fileID: 1479626822}
   P1GO: {fileID: 591783260}
   P1: {fileID: 591783265}
+  HS: {fileID: 0}

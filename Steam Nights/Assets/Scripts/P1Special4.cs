@@ -61,7 +61,7 @@ public float StartUp;
         if(other.gameObject.CompareTag("Player2") && P2B.Blocking == false)
         {
             Rigidbody2D enemRB = P2.GetComponent<Rigidbody2D>();
-            enemRB.AddForce(P1GO.transform.localScale.x * transform.right * Knockback, ForceMode2D.Force);
+            enemRB.velocity = new Vector2(Knockback, Knockback);
             P2H.Health -= Damage;
             P2G.Steam += MeterGain;
             StartCoroutine(HS.Stun(HitStun));

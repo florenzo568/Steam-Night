@@ -10,6 +10,7 @@ public class P1DownLight : MonoBehaviour
     public float Knockback;
     public float Damage;
     public float MeterGain;
+    public float HitStun;
     [SerializeField] P1Gauge P2G;
     private SpriteRenderer Sprite;
     private BoxCollider2D HB;
@@ -19,6 +20,7 @@ public class P1DownLight : MonoBehaviour
     [SerializeField] GameObject P2;
     [SerializeField] GameObject P1GO;
     [SerializeField] P1Move P1;
+    [SerializeField] HitStun HS;
     void Start()
     {
         Sprite = Punch.GetComponent<SpriteRenderer>();
@@ -61,6 +63,7 @@ public class P1DownLight : MonoBehaviour
             Rigidbody2D enemRB = P2.GetComponent<Rigidbody2D>();
             P2H.Health -= Damage;
             enemRB.velocity = new Vector2(0, Knockback);
+            StartCoroutine(HS.Stun(HitStun));
             P2G.Steam += MeterGain;
             Debug.Log("Hit");
         }
