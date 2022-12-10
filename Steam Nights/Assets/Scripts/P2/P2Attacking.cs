@@ -7,7 +7,7 @@ public class P2Attacking : MonoBehaviour
     [SerializeField] P2Move P2;
     [SerializeField] P1Health P1H;
     [SerializeField] P2Blocking P2B;
-    [SerializeField] P1Light P1L;
+    [SerializeField] P2Light P2L;
     [SerializeField] P1DownLight P1DL;
     [SerializeField] P1JumpLight P1JL;
     [SerializeField] P1Medium P1M;
@@ -44,7 +44,7 @@ public class P2Attacking : MonoBehaviour
         }
         if (Input.GetButtonDown("Fire4") && P2.IsGrounded() && !Input.GetKey("down") && P2.canMove && P2B.Blocking == false)
         {
-            Debug.Log("Light");
+            StartCoroutine(P2L.Light());
         }
         if (Input.GetButtonDown("Fire4") && P2.IsGrounded() && Input.GetKey("down") && P2B.Blocking == false)
         {

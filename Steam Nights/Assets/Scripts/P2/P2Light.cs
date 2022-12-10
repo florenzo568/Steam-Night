@@ -11,7 +11,7 @@ public class P2Light : MonoBehaviour
     public float HitStun;
     public float Damage;
     public float MeterGain;
-    [SerializeField] P1Gauge P1G;
+    [SerializeField] P2Gauge P1G;
     private SpriteRenderer Sprite;
     private BoxCollider2D HB;
     [SerializeField] FramesToSec Frames;
@@ -33,10 +33,7 @@ public class P2Light : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if(Input.GetButtonDown("Fire1") && P1.IsGrounded())
-        {
-            StartCoroutine(Light());
-        }*/
+
     }
 
     public IEnumerator Light()
@@ -59,10 +56,10 @@ public class P2Light : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.CompareTag("Player2") && P1B.Blocking == false)
+        if(other.gameObject.CompareTag("Player1") && P1B.Blocking == false)
         {
             Rigidbody2D enemRB = P1.GetComponent<Rigidbody2D>();
-            enemRB.velocity = new Vector2(Knockback, Knockback);
+            enemRB.velocity = new Vector2(Knockback * -other.gameObject.transform.localScale.x , Knockback);
             P1H.Health -= Damage;
             P1G.Steam += MeterGain;
             StartCoroutine(HS.Stun(HitStun));
