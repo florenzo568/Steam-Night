@@ -83,7 +83,7 @@ public class P1ParticleTest : MonoBehaviour
         //          crouch = false;
         //           DPTime = .72f;
         //       }
-
+    }
         void FixedUpdate()
         {
             if (isDashing)
@@ -125,6 +125,6 @@ public class P1ParticleTest : MonoBehaviour
             yield return new WaitForSeconds(dashingCooldown);
             canDash = true;
         }
-    }
+    
 }
 
