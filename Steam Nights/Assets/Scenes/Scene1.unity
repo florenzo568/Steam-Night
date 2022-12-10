@@ -554,6 +554,7 @@ GameObject:
   - component: {fileID: 405855212}
   - component: {fileID: 405855214}
   - component: {fileID: 405855213}
+  - component: {fileID: 405855215}
   m_Layer: 0
   m_Name: Light Neutral
   m_TagString: Untagged
@@ -569,8 +570,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 405855211}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.78, y: 0.19, z: 0}
-  m_LocalScale: {x: 2.3190634, y: 0.27548867, z: 1}
+  m_LocalPosition: {x: -0.5221, y: 0.1944, z: 0}
+  m_LocalScale: {x: 1.803369, y: 0.26660737, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1479626826}
@@ -654,6 +655,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &405855215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405855211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2292ce2b068ca274baf4bc1468d76207, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartUp: 5
+  Active: 2
+  Recovery: 7
+  Knockback: 12
+  HitStun: 9
+  Damage: 16
+  MeterGain: 6
+  P1G: {fileID: 1479626832}
+  Frames: {fileID: 1729598129}
+  P1H: {fileID: 591783281}
+  Punch: {fileID: 405855211}
+  P1: {fileID: 591783260}
+  P2GO: {fileID: 1479626822}
+  P2: {fileID: 1479626827}
+  P1B: {fileID: 591783270}
+  HS: {fileID: 591783282}
 --- !u!1 &447072674
 GameObject:
   m_ObjectHideFlags: 0
@@ -959,6 +988,7 @@ GameObject:
   - component: {fileID: 591783267}
   - component: {fileID: 591783270}
   - component: {fileID: 591783277}
+  - component: {fileID: 591783282}
   - component: {fileID: 591783281}
   - component: {fileID: 591783279}
   - component: {fileID: 591783280}
@@ -1236,6 +1266,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 600
+--- !u!114 &591783282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591783260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a04fa81f7488544429f495415aae0da0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  P1: {fileID: 591783265}
+  Sec: {fileID: 1729598129}
 --- !u!1 &640876008
 GameObject:
   m_ObjectHideFlags: 0
@@ -1560,6 +1604,7 @@ GameObject:
   - component: {fileID: 1479626829}
   - component: {fileID: 1479626830}
   - component: {fileID: 1479626831}
+  - component: {fileID: 1479626832}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Player2
@@ -1767,7 +1812,7 @@ MonoBehaviour:
   P2: {fileID: 1479626827}
   P1H: {fileID: 591783281}
   P2B: {fileID: 1479626828}
-  P1L: {fileID: 0}
+  P2L: {fileID: 405855215}
   P1DL: {fileID: 0}
   P1JL: {fileID: 0}
   P1M: {fileID: 0}
@@ -1777,6 +1822,20 @@ MonoBehaviour:
   P1JH: {fileID: 0}
   P1S1: {fileID: 0}
   P1S4: {fileID: 0}
+--- !u!114 &1479626832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479626822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48cedf4b5b34d0b48bdc1997ecf234fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Steam: 0
+  Night: 0
 --- !u!1 &1559013298
 GameObject:
   m_ObjectHideFlags: 0
