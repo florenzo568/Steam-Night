@@ -6,6 +6,7 @@ public class P2Gauge : MonoBehaviour
 {
     public float Steam;
     public float Night;
+    public int Ammo = 8;
     void Start()
     {
         

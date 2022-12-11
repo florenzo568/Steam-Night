@@ -12,11 +12,12 @@ public class P2Attacking : MonoBehaviour
     [SerializeField] P2Medium P2M;
     [SerializeField] P2DownMedium P2DM;
     [SerializeField] P2JumpMedium P2JM;
-    //[SerializeField] P1Heavy P1H;
+    [SerializeField] P2Heavy P2SH;
     [SerializeField] P1DownHeavy P1DH;
     [SerializeField] P1JumpHeavy P1JH;
     [SerializeField] P1Special1 P1S1;
     [SerializeField] P1Special4 P1S4;
+    [SerializeField] P2Gauge P2G;
     void Start()
     {
         
@@ -65,9 +66,10 @@ public class P2Attacking : MonoBehaviour
         {
             StartCoroutine(P2JM.Medium());
         }
-        if (Input.GetButtonDown("Fire6") && P2.IsGrounded() && !Input.GetKey("down") && P2.canMove && P2B.Blocking == false)
+        if (Input.GetButtonDown("Fire6") && P2.IsGrounded() && !Input.GetKey("down") && P2.canMove && P2B.Blocking == false && P2G.Ammo > 0)
         {
-            Debug.Log("Heavy");
+            StartCoroutine(P2SH.Heavy());
+            P2G.Ammo -= 1;
         }
         if (Input.GetButtonDown("Fire6") && P2.IsGrounded() && Input.GetKey("down"))
         {
