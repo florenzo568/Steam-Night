@@ -8,7 +8,8 @@ public class P1ParticleTest : MonoBehaviour
     public float speed;
     public float JumpForce;
     [SerializeField]
-    private GameObject particles;
+    public ParticleSystem particlesystem;
+    public GameObject particles;
 
     public bool canDash = true;
     private bool isDashing;
@@ -20,6 +21,7 @@ public class P1ParticleTest : MonoBehaviour
     public float dashingPower;
     public float dashingTime;
     public float dashingCooldown;
+    public float dashingDirection;
 
     //[SerializeField] P2Blocking P2B;
     [SerializeField] private Rigidbody2D rb;
@@ -30,12 +32,20 @@ public class P1ParticleTest : MonoBehaviour
 
     void Start()
     {
+        particlesystem = GetComponent<ParticleSystem>();
         particles.SetActive(false);
+
     }
 
+    void SetStartSpeed() { 
+    }
     // Update is called once per frame
     void Update()
     {
+        dashingDirection = horizontal;
+        var main = particlesystem.main;
+        main.startSpeed = dashingDirection;
+        
         if (isDashing)
         {
             return;
@@ -114,10 +124,10 @@ public class P1ParticleTest : MonoBehaviour
         {
             canDash = false;
             isDashing = true;
-            particles.SetActive(true);
             float OgGravity = rb.gravityScale;
             rb.gravityScale = 0f;
             rb.velocity = new Vector2(horizontal * dashingPower, 0f);
+            particles.SetActive(true);
             yield return new WaitForSeconds(dashingTime);
             rb.gravityScale = OgGravity;
             isDashing = false;
