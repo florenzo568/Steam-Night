@@ -5,14 +5,13 @@ using UnityEngine;
 public class P2Attacking : MonoBehaviour
 {
     [SerializeField] P2Move P2;
-    [SerializeField] P1Health P1H;
     [SerializeField] P2Blocking P2B;
     [SerializeField] P2Light P2L;
-    [SerializeField] P1DownLight P1DL;
-    [SerializeField] P1JumpLight P1JL;
-    [SerializeField] P1Medium P1M;
-    [SerializeField] P1DownMedium P1DM;
-    [SerializeField] P1JumpMedium P1JM;
+    [SerializeField] P2DownLight P2DL;
+    [SerializeField] P2JumpLight P2JL;
+    [SerializeField] P2Medium P2M;
+    [SerializeField] P2DownMedium P2DM;
+    [SerializeField] P2JumpMedium P2JM;
     //[SerializeField] P1Heavy P1H;
     [SerializeField] P1DownHeavy P1DH;
     [SerializeField] P1JumpHeavy P1JH;
@@ -48,23 +47,23 @@ public class P2Attacking : MonoBehaviour
         }
         if (Input.GetButtonDown("Fire4") && P2.IsGrounded() && Input.GetKey("down") && P2B.Blocking == false)
         {
-            Debug.Log("Light");
+            StartCoroutine(P2DL.Light());
         }
         if (Input.GetButtonDown("Fire4") && P2.IsGrounded() == false && P2.canMove)
         {
-            Debug.Log("Light");
+            StartCoroutine(P2JL.Light());
         }
         if (Input.GetButtonDown("Fire5") && P2.IsGrounded() && !Input.GetKey("down") && P2.canMove && P2B.Blocking == false)
         {
-            Debug.Log("Medium");
+            StartCoroutine(P2M.Medium());
         }
         if (Input.GetButtonDown("Fire5") && P2.IsGrounded() && Input.GetKey("down"))
         {
-            Debug.Log("Medium");
+            StartCoroutine(P2DM.Medium());
         }
         if (Input.GetButtonDown("Fire5") && P2.IsGrounded() == false && P2.canMove)
         {
-            Debug.Log("Medium");
+            StartCoroutine(P2JM.Medium());
         }
         if (Input.GetButtonDown("Fire6") && P2.IsGrounded() && !Input.GetKey("down") && P2.canMove && P2B.Blocking == false)
         {
