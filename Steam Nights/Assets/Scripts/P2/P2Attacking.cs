@@ -15,8 +15,10 @@ public class P2Attacking : MonoBehaviour
     [SerializeField] P2Heavy P2SH;
     [SerializeField] P2DownHeavy P2DH;
     [SerializeField] P2JumpHeavy P2JH;
-    [SerializeField] P1Special1 P1S1;
-    [SerializeField] P1Special4 P1S4;
+    [SerializeField] P1Special1 P2S1;
+    [SerializeField] P2Special2 P2S2;
+    [SerializeField] P1Special3 P2S3;
+    [SerializeField] P1Special4 P2S4;
     [SerializeField] P2Gauge P2G;
     void Start()
     {
@@ -32,7 +34,7 @@ public class P2Attacking : MonoBehaviour
         }
         if (Input.GetButton("Block2") && Input.GetButtonDown("Fire4") && P2.IsGrounded() && P2B.Blocking == true && !P2.crouch && P2.canMove)
         {
-            Debug.Log("Special 2");
+            StartCoroutine(P2S2.Special());
         }
         if (Input.GetButton("Block2") && Input.GetButtonDown("Fire5") && P2.IsGrounded() && P2B.Blocking == true && !P2.crouch && P2.canMove)
         {
@@ -71,7 +73,7 @@ public class P2Attacking : MonoBehaviour
             StartCoroutine(P2SH.Heavy());
             P2G.Ammo -= 1;
         }
-        if (Input.GetButtonDown("Fire6") && P2.IsGrounded() && Input.GetKey("down"))
+        if (Input.GetButtonDown("Fire6") && P2.IsGrounded() && Input.GetKey("down") && P2.canMove && P2B.Blocking == false && P2G.Ammo > 0)
         {
             StartCoroutine(P2DH.Heavy());
             P2G.Ammo -= 1;
