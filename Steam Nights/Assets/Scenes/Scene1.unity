@@ -2128,6 +2128,7 @@ GameObject:
   - component: {fileID: 1479626834}
   - component: {fileID: 1479626835}
   - component: {fileID: 1479626836}
+  - component: {fileID: 1479626837}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Player2
@@ -2348,7 +2349,7 @@ MonoBehaviour:
   P2S1: {fileID: 0}
   P2S2: {fileID: 1479626836}
   P2S3: {fileID: 0}
-  P2S4: {fileID: 0}
+  P2S4: {fileID: 1479626837}
   P2G: {fileID: 1479626832}
 --- !u!114 &1479626832
 MonoBehaviour:
@@ -2365,6 +2366,7 @@ MonoBehaviour:
   Steam: 0
   Night: 0
   Ammo: 8
+  Hot: 0
 --- !u!114 &1479626833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2455,6 +2457,29 @@ MonoBehaviour:
   StartUp: 11
   Active: 1
   Recovery: 5
+  MeterGain: 0
+  P2G: {fileID: 1479626832}
+  Frames: {fileID: 1729598129}
+  P1: {fileID: 591783260}
+  P2GO: {fileID: 1479626822}
+  P2: {fileID: 1479626827}
+  P1B: {fileID: 591783270}
+  HS: {fileID: 591783282}
+--- !u!114 &1479626837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479626822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d44f2ba9e6536b742994f8c195c65888, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartUp: 11
+  Active: 1
+  Recovery: 9
   MeterGain: 0
   P2G: {fileID: 1479626832}
   Frames: {fileID: 1729598129}
