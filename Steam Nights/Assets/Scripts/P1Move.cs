@@ -61,13 +61,13 @@ public float horizontal;
         if(Turn.Flip)
         {
             Vector3 lTemp = transform.localScale;
-            lTemp.x = -1;
+            lTemp.x = -2.6f ;
             transform.localScale = lTemp;
         }
         else if(!Turn.Flip)
         {
             Vector3 lTemp = transform.localScale;
-            lTemp.x = 1;
+            lTemp.x = 2.6f;
             transform.localScale = lTemp;
         }
         if(DragP == true)

@@ -78,7 +78,7 @@ public class P2Attacking : MonoBehaviour
             StartCoroutine(P2DH.Heavy());
             P2G.Ammo -= 1;
         }
-        if (Input.GetButtonDown("Fire6") && P2.IsGrounded() == false && P2.canMove)
+        if (Input.GetButtonDown("Fire6") && P2.IsGrounded() == false && P2.canMove && P2G.Ammo > 0)
         {
             StartCoroutine(P2JH.Heavy());
             P2G.Ammo -= 1;
