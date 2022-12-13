@@ -255,6 +255,7 @@ MonoBehaviour:
   Damage: 34
   MeterGain: 16
   P2G: {fileID: 591783277}
+  KnockBackPlus: 0
   Frames: {fileID: 1729598129}
   P2H: {fileID: 1479626830}
   Punch: {fileID: 102533870}
@@ -791,6 +792,7 @@ MonoBehaviour:
   Damage: 28
   MeterGain: 14
   HitStun: 8
+  KnockBackPlus: 0
   P2G: {fileID: 591783277}
   Frames: {fileID: 1729598129}
   P2H: {fileID: 1479626830}
@@ -1210,6 +1212,7 @@ MonoBehaviour:
   HitStun: 12
   Damage: 24
   MeterGain: 12
+  KnockBackPlus: 0
   P2G: {fileID: 591783277}
   Frames: {fileID: 1729598129}
   P2H: {fileID: 1479626830}
@@ -2404,6 +2407,7 @@ MonoBehaviour:
   Damage: 55
   MeterGain: 18
   P2G: {fileID: 591783277}
+  KnockBackPlus: 0
   Frames: {fileID: 1729598129}
   P2H: {fileID: 1479626830}
   Punch: {fileID: 848337366}
@@ -3060,7 +3064,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1479626822}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: fdc34cf8e3db4dd4285af8c81ee7458a, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -3094,9 +3098,9 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 5
   m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_Interpolate: 1
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!212 &1479626825
 SpriteRenderer:
@@ -3238,6 +3242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 600
+  Knock: 0
 --- !u!114 &1479626831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3321,7 +3326,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartUp: 8
   Active: 1
-  Recovery: 10
+  Recovery: 30
   MeterGain: 30
   P2G: {fileID: 1479626832}
   Frames: {fileID: 1729598129}
@@ -3962,6 +3967,7 @@ MonoBehaviour:
   Damage: 34
   MeterGain: 18
   P2G: {fileID: 591783277}
+  KnockBackPlus: 0
   Frames: {fileID: 1729598129}
   P2H: {fileID: 1479626830}
   Punch: {fileID: 1652292452}
@@ -4132,6 +4138,7 @@ MonoBehaviour:
   HitStun: 30
   Damage: 65
   MeterGain: 16
+  KnockBackPlus: 0
   P2G: {fileID: 591783277}
   Frames: {fileID: 1729598129}
   P2H: {fileID: 1479626830}
@@ -4590,6 +4597,7 @@ MonoBehaviour:
   Damage: 60
   MeterGain: 16
   P2G: {fileID: 591783277}
+  KnockBackPlus: 0
   Frames: {fileID: 1729598129}
   P2H: {fileID: 1479626830}
   Punch: {fileID: 1887200267}
@@ -4904,6 +4912,7 @@ MonoBehaviour:
   Damage: 30
   MeterGain: 16
   P2G: {fileID: 591783277}
+  KnockBackPlus: 0
   Frames: {fileID: 1729598129}
   P2H: {fileID: 1479626830}
   Punch: {fileID: 1981323736}
@@ -5043,6 +5052,7 @@ MonoBehaviour:
   Damage: 24
   MeterGain: 12
   HitStun: 18
+  KnockBackPlus: 0
   P2G: {fileID: 591783277}
   Frames: {fileID: 1729598129}
   P2H: {fileID: 1479626830}

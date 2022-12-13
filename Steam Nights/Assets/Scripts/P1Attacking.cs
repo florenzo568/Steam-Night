@@ -85,5 +85,13 @@ public class P1Attacking : MonoBehaviour
             StartCoroutine(P1JH.Heavy());
         }
         P1L.KnockBackPlus = P2H.Knock * 0.1f;
+        P1DL.KnockBackPlus = P2H.Knock * 0.1f;
+        P1JL.KnockBackPlus = P2H.Knock * 0.1f;
+        P1M.KnockBackPlus = P2H.Knock * 0.1f;
+        P1DM.KnockBackPlus = P2H.Knock * 0.1f;
+        P1JM.KnockBackPlus = P2H.Knock * 0.1f;
+        P1H.KnockBackPlus = P2H.Knock * 0.1f;
+        P1DH.KnockBackPlus = P2H.Knock * 0.1f;
+        P1JH.KnockBackPlus = P2H.Knock * 0.1f;
     }
 }
