@@ -5,6 +5,7 @@ using UnityEngine;
 public class P2Health : MonoBehaviour
 {
     public float Health;
+    public float Knock;
     void Start()
     {
         
@@ -17,5 +18,6 @@ public class P2Health : MonoBehaviour
         {
             Debug.Log("P2 Dead");
         }
+        Knock = 600 - Health;
     }
 }
