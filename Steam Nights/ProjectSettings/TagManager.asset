@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Player2
   - Player1
+  - FirePoint
   layers:
   - Default
   - TransparentFX

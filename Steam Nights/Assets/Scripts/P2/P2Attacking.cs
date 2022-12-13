@@ -17,7 +17,7 @@ public class P2Attacking : MonoBehaviour
     [SerializeField] P2JumpHeavy P2JH;
     [SerializeField] P2Special1 P2S1;
     [SerializeField] P2Special2 P2S2;
-    [SerializeField] P1Special3 P2S3;
+    [SerializeField] P2Special3 P2S3;
     [SerializeField] P2Special4 P2S4;
     [SerializeField] P2Gauge P2G;
     void Start()
@@ -38,7 +38,7 @@ public class P2Attacking : MonoBehaviour
         }
         if (Input.GetButton("Block2") && Input.GetButtonDown("Fire5") && P2.IsGrounded() && P2B.Blocking == true && !P2.crouch && P2.canMove)
         {
-            Debug.Log("Special 3");
+            StartCoroutine(P2S3.Special());
         }
         if (Input.GetButton("Block2") && Input.GetButtonDown("Fire6") && P2.IsGrounded() && P2B.Blocking == true && !P2.crouch && P2.canMove)
         {

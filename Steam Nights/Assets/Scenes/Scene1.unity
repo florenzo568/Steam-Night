@@ -2129,6 +2129,7 @@ GameObject:
   - component: {fileID: 1479626835}
   - component: {fileID: 1479626838}
   - component: {fileID: 1479626836}
+  - component: {fileID: 1479626839}
   - component: {fileID: 1479626837}
   m_Layer: 0
   m_Name: Player2
@@ -2349,7 +2350,7 @@ MonoBehaviour:
   P2JH: {fileID: 1479626835}
   P2S1: {fileID: 1479626838}
   P2S2: {fileID: 1479626836}
-  P2S3: {fileID: 0}
+  P2S3: {fileID: 1479626839}
   P2S4: {fileID: 1479626837}
   P2G: {fileID: 1479626832}
 --- !u!114 &1479626832
@@ -2509,6 +2510,31 @@ MonoBehaviour:
   Frames: {fileID: 1729598129}
   FirePoint: {fileID: 515458961}
   Trap: {fileID: 1809120500642066642, guid: 829935ef2b8176f45be7c1d8efc36bbf, type: 3}
+  P1: {fileID: 591783260}
+  P2GO: {fileID: 1479626822}
+  P2: {fileID: 1479626827}
+  P1B: {fileID: 591783270}
+  HS: {fileID: 591783282}
+--- !u!114 &1479626839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479626822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caf134226c7c5804490d4f88e257a869, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartUp: 10
+  Active: 1
+  Recovery: 7
+  MeterGain: 0
+  P2G: {fileID: 1479626832}
+  Frames: {fileID: 1729598129}
+  FirePoint: {fileID: 515458961}
+  Trap: {fileID: 5429120451168773322, guid: f02092ef4c119fc42898b17327fca738, type: 3}
   P1: {fileID: 591783260}
   P2GO: {fileID: 1479626822}
   P2: {fileID: 1479626827}
