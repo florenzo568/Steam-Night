@@ -21,6 +21,7 @@ public class P1ParticleTest : MonoBehaviour
     public float dashingPower;
     public float dashingTime;
     public float dashingCooldown;
+    //particlesystem doesn't like using math mid script, so new float was made for the math
     public float dashingDirection;
 
     //[SerializeField] P2Blocking P2B;
@@ -32,19 +33,17 @@ public class P1ParticleTest : MonoBehaviour
 
     void Start()
     {
-        particlesystem = GetComponent<ParticleSystem>();
+        //prevents particles from activating right away
         particles.SetActive(false);
 
     }
 
-    void SetStartSpeed() { 
-    }
+
     // Update is called once per frame
     void Update()
     {
-        dashingDirection = horizontal;
-        var main = particlesystem.main;
-        main.startSpeed = dashingDirection;
+        
+        
         
         if (isDashing)
         {
@@ -122,15 +121,24 @@ public class P1ParticleTest : MonoBehaviour
 
         IEnumerator Dash()
         {
+            //establishes particlesystem mainmodule in script. Would do in update but has to be in "layer"
+            //that it is used in. particlesystem.main.startSpeed = dashingDirection resulted in errors.
+            var main = particlesystem.main;
             canDash = false;
             isDashing = true;
+            //math for particles done with new float. main.startSpeed = 50 * horizontal just didn't work for some
+            //bizarre reason.
+            dashingDirection = 50 * horizontal;
+            main.startSpeed = dashingDirection;
             float OgGravity = rb.gravityScale;
             rb.gravityScale = 0f;
             rb.velocity = new Vector2(horizontal * dashingPower, 0f);
+            //particles turn on after direction is set
             particles.SetActive(true);
             yield return new WaitForSeconds(dashingTime);
             rb.gravityScale = OgGravity;
             isDashing = false;
+            //particles end as soon as dash ends.
             particles.SetActive(false);
             yield return new WaitForSeconds(dashingCooldown);
             canDash = true;
