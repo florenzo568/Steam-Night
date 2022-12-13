@@ -122,7 +122,7 @@ public class P1ParticleTest : MonoBehaviour
         IEnumerator Dash()
         {
             //establishes particlesystem mainmodule in script. Would do in update but has to be in "layer"
-            //that it is used in.
+            //that it is used in. particlesystem.main.startSpeed = dashingDirection resulted in errors.
             var main = particlesystem.main;
             canDash = false;
             isDashing = true;
