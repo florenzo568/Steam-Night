@@ -15,7 +15,7 @@ public class P2Attacking : MonoBehaviour
     [SerializeField] P2Heavy P2SH;
     [SerializeField] P2DownHeavy P2DH;
     [SerializeField] P2JumpHeavy P2JH;
-    [SerializeField] P1Special1 P2S1;
+    [SerializeField] P2Special1 P2S1;
     [SerializeField] P2Special2 P2S2;
     [SerializeField] P1Special3 P2S3;
     [SerializeField] P2Special4 P2S4;
@@ -30,7 +30,7 @@ public class P2Attacking : MonoBehaviour
     {
         if (Input.GetButton("Block2") && Input.GetButtonDown("Fire4") && P2.IsGrounded() && P2B.Blocking == true && P2.crouch)
         {
-            Debug.Log("Special Innate");
+            StartCoroutine(P2S1.Special());
         }
         if (Input.GetButton("Block2") && Input.GetButtonDown("Fire4") && P2.IsGrounded() && P2B.Blocking == true && !P2.crouch && P2.canMove)
         {
