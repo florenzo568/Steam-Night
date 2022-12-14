@@ -5,6 +5,7 @@ using UnityEngine;
 public class P1Health : MonoBehaviour
 {
     public float Health;
+    public float Knock;
     void Start()
     {
         
@@ -17,5 +18,6 @@ public class P1Health : MonoBehaviour
         {
             Debug.Log("P1 Dead");
         }
+        Knock = 600 - Health;
     }
 }

@@ -6,6 +6,7 @@ public class P2Attacking : MonoBehaviour
 {
     [SerializeField] P2Move P2;
     [SerializeField] P2Blocking P2B;
+    [SerializeField] P1Health P1H;
     [SerializeField] P2Light P2L;
     [SerializeField] P2DownLight P2DL;
     [SerializeField] P2JumpLight P2JL;
@@ -83,5 +84,6 @@ public class P2Attacking : MonoBehaviour
             StartCoroutine(P2JH.Heavy());
             P2G.Ammo -= 1;
         }
+        P2L.KnockBackPlus = P1H.Knock * 0.1f;
     }
 }

@@ -11,6 +11,7 @@ public class P2Light : MonoBehaviour
     public float HitStun;
     public float Damage;
     public float MeterGain;
+    public float KnockBackPlus;
     [SerializeField] P2Gauge P1G;
     private SpriteRenderer Sprite;
     private BoxCollider2D HB;
@@ -59,7 +60,7 @@ public class P2Light : MonoBehaviour
         if(other.gameObject.CompareTag("Player1") && P1B.Blocking == false)
         {
             Rigidbody2D enemRB = P1.GetComponent<Rigidbody2D>();
-            enemRB.velocity = new Vector2(Knockback * -other.gameObject.transform.localScale.x , Knockback);
+             enemRB.velocity = new Vector2(Knockback * -other.gameObject.transform.localScale.x + KnockBackPlus, Knockback + KnockBackPlus);
             P1H.Health -= Damage;
             P1G.Steam += MeterGain;
             StartCoroutine(HS.Stun(HitStun));
