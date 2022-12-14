@@ -865,6 +865,7 @@ MonoBehaviour:
   P2: {fileID: 1479626827}
   P1B: {fileID: 591783270}
   HS: {fileID: 591783282}
+  animator: {fileID: 0}
 --- !u!61 &333037330
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1585,6 +1586,7 @@ GameObject:
   - component: {fileID: 591783281}
   - component: {fileID: 591783279}
   - component: {fileID: 591783280}
+  - component: {fileID: 591783283}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Player1
@@ -1874,6 +1876,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   P1: {fileID: 591783265}
   Sec: {fileID: 1729598129}
+--- !u!95 &591783283
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591783260}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 16af42b2a46bfa54dafe59415879a212, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &599400054
 GameObject:
   m_ObjectHideFlags: 0
@@ -2680,6 +2702,7 @@ MonoBehaviour:
   P2: {fileID: 1479626827}
   P1B: {fileID: 591783270}
   HS: {fileID: 591783282}
+  animator: {fileID: 0}
 --- !u!212 &1338453819
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2952,6 +2975,7 @@ MonoBehaviour:
   P2: {fileID: 1479626827}
   P1B: {fileID: 591783270}
   HS: {fileID: 591783282}
+  animator: {fileID: 0}
 --- !u!61 &1380442703
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3224,6 +3248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   P2: {fileID: 1479626827}
   Blocking: 0
+  animator: {fileID: 0}
 --- !u!114 &1479626829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3348,6 +3373,7 @@ MonoBehaviour:
   P2: {fileID: 1479626827}
   P1B: {fileID: 591783270}
   HS: {fileID: 591783282}
+  animator: {fileID: 0}
 --- !u!114 &1479626835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3396,6 +3422,7 @@ MonoBehaviour:
   P2: {fileID: 1479626827}
   P1B: {fileID: 591783270}
   HS: {fileID: 591783282}
+  animator: {fileID: 0}
 --- !u!114 &1479626837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3419,6 +3446,7 @@ MonoBehaviour:
   P2: {fileID: 1479626827}
   P1B: {fileID: 591783270}
   HS: {fileID: 591783282}
+  animator: {fileID: 0}
 --- !u!114 &1479626838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3444,6 +3472,7 @@ MonoBehaviour:
   P2: {fileID: 1479626827}
   P1B: {fileID: 591783270}
   HS: {fileID: 591783282}
+  animator: {fileID: 0}
 --- !u!114 &1479626839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3469,6 +3498,7 @@ MonoBehaviour:
   P2: {fileID: 1479626827}
   P1B: {fileID: 591783270}
   HS: {fileID: 591783282}
+  animator: {fileID: 0}
 --- !u!95 &1479626840
 Animator:
   serializedVersion: 4
@@ -4243,6 +4273,7 @@ MonoBehaviour:
   P2: {fileID: 1479626827}
   P1B: {fileID: 591783270}
   HS: {fileID: 591783282}
+  animator: {fileID: 0}
 --- !u!61 &1726312843
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4736,6 +4767,7 @@ MonoBehaviour:
   P2: {fileID: 1479626827}
   P1B: {fileID: 591783270}
   HS: {fileID: 591783282}
+  animator: {fileID: 0}
 --- !u!61 &1916268187
 BoxCollider2D:
   m_ObjectHideFlags: 0
