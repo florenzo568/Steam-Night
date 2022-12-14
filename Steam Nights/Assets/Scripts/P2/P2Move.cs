@@ -21,10 +21,11 @@ public float horizontal;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private P1Turning Turn;
+    public Animator animator;
 
     void Start()
     {
-        
+        animator = GameObject.FindGameObjectWithTag("Player2").GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -42,10 +43,13 @@ public float horizontal;
         }
         if(Input.GetKeyDown("down") && IsGrounded())
         {
+            Debug.Log("Crouching");
+            animator.SetBool("LeonCrouching", true);
             crouch = true;
         }
         else if(Input.GetKeyUp("down") && IsGrounded())
         {
+            animator.SetBool("LeonCrouching", false);
             crouch = false;
         }
 
@@ -65,6 +69,20 @@ public float horizontal;
             Vector3 lTemp = transform.localScale;
             lTemp.x = 2.1f;
             transform.localScale = lTemp;
+        }
+        if (transform.localScale.x > 0 && horizontal < 0)
+        {
+            animator.SetBool("LeonWalking", true);
+        }
+        if (transform.localScale.x < 0 && horizontal > 0)
+        {
+            Debug.Log("Backwards");
+            animator.SetBool("LeonWalkingBack", true);
+        }
+        if (horizontal == 0)
+        {
+            animator.SetBool("LeonWalking", false);
+            animator.SetBool("LeonWalkingBack", false);
         }
     }
     private void FixedUpdate()

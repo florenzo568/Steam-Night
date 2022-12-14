@@ -393,6 +393,7 @@ MonoBehaviour:
   Damage: 60
   MeterGain: 16
   P2G: {fileID: 252636698}
+  KnockBackPlus: 0
   Frames: {fileID: 0}
   P2H: {fileID: 0}
   Punch: {fileID: 0}
@@ -421,6 +422,7 @@ MonoBehaviour:
   Damage: 55
   MeterGain: 18
   P2G: {fileID: 252636698}
+  KnockBackPlus: 0
   Frames: {fileID: 0}
   P2H: {fileID: 0}
   Punch: {fileID: 0}
@@ -448,6 +450,7 @@ MonoBehaviour:
   HitStun: 30
   Damage: 65
   MeterGain: 16
+  KnockBackPlus: 0
   P2G: {fileID: 252636698}
   Frames: {fileID: 0}
   P2H: {fileID: 0}
@@ -477,6 +480,7 @@ MonoBehaviour:
   Damage: 30
   MeterGain: 16
   P2G: {fileID: 252636698}
+  KnockBackPlus: 0
   Frames: {fileID: 0}
   P2H: {fileID: 0}
   Punch: {fileID: 0}
@@ -505,6 +509,7 @@ MonoBehaviour:
   Damage: 34
   MeterGain: 16
   P2G: {fileID: 252636698}
+  KnockBackPlus: 0
   Frames: {fileID: 0}
   P2H: {fileID: 0}
   Punch: {fileID: 0}
@@ -533,6 +538,7 @@ MonoBehaviour:
   Damage: 34
   MeterGain: 18
   P2G: {fileID: 252636698}
+  KnockBackPlus: 0
   Frames: {fileID: 0}
   P2H: {fileID: 0}
   Punch: {fileID: 0}
@@ -560,6 +566,7 @@ MonoBehaviour:
   Damage: 28
   MeterGain: 14
   HitStun: 0
+  KnockBackPlus: 0
   P2G: {fileID: 252636698}
   Frames: {fileID: 0}
   P2H: {fileID: 0}
@@ -587,6 +594,7 @@ MonoBehaviour:
   Damage: 24
   MeterGain: 12
   HitStun: 0
+  KnockBackPlus: 0
   P2G: {fileID: 252636698}
   Frames: {fileID: 0}
   P2H: {fileID: 0}
@@ -614,6 +622,7 @@ MonoBehaviour:
   HitStun: 12
   Damage: 24
   MeterGain: 12
+  KnockBackPlus: 0
   P2G: {fileID: 252636698}
   Frames: {fileID: 0}
   P2H: {fileID: 0}
@@ -715,7 +724,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 252636684}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f541df62160cb146a04e7e6f183eb51, type: 3}
   m_Name: 
@@ -6082,6 +6091,7 @@ GameObject:
   - component: {fileID: 1375957519}
   - component: {fileID: 1375957518}
   - component: {fileID: 1375957517}
+  - component: {fileID: 1375957520}
   m_Layer: 0
   m_Name: Marissa (1)
   m_TagString: Untagged
@@ -6176,6 +6186,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1375957520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375957516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72c3aa16a520dca4596d9faa1580b90b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1375957517}
 --- !u!1 &1979137249
 GameObject:
   m_ObjectHideFlags: 0

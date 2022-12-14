@@ -84,6 +84,6 @@ public class P2Attacking : MonoBehaviour
             StartCoroutine(P2JH.Heavy());
             P2G.Ammo -= 1;
         }
-        P2L.KnockBackPlus = P1H.Knock * 0.1f;
+       // P2L.KnockBackPlus = P1H.Knock * 0.1f;
     }
 }
