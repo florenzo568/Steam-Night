@@ -31,6 +31,7 @@ public float horizontal;
     // Update is called once per frame
     void Update()
     {
+
         if (isDashing)
         {
             return;
@@ -39,6 +40,7 @@ public float horizontal;
 
         if(Input.GetKeyDown("up") && IsGrounded() && canMove)
         {
+            animator.SetBool("LeonJumping", true);
             rb.velocity = new Vector2(rb.velocity.x, JumpForce);
         }
         if(Input.GetKeyDown("down") && IsGrounded())
@@ -115,6 +117,7 @@ public float horizontal;
     {
         canDash = false;
         isDashing = true;
+        animator.SetBool("LeonDash", true);
         float OgGravity = rb.gravityScale;
         rb.gravityScale = 0f;
         rb.velocity = new Vector2(horizontal * dashingPower, 0f);
