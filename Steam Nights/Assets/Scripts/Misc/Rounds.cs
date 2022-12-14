@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class Rounds : MonoBehaviour
@@ -12,7 +13,14 @@ public class Rounds : MonoBehaviour
     [SerializeField] TextMeshProUGUI P2Wins;
     void Start()
     {
-        
+        if(P1W >= 5)
+        {
+            //Go to P1 win screen
+        }
+        if(P2W >= 5)
+        {
+            SceneManager.LoadScene("LeonWinScene", LoadSceneMode.Single);
+        }
     }
 
     // Update is called once per frame
