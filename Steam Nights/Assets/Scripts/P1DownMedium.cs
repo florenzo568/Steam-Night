@@ -11,9 +11,9 @@ public class P1DownMedium : MonoBehaviour
     public float HitStun;
     public float Damage;
     public float MeterGain;
+    public float KnockBackPlus;
     [SerializeField] P1Gauge P2G;
     private SpriteRenderer Sprite;
-    public float KnockBackPlus;
     private BoxCollider2D HB;
     [SerializeField] FramesToSec Frames;
     [SerializeField] P2Health P2H;
@@ -64,7 +64,7 @@ public class P1DownMedium : MonoBehaviour
         if(other.gameObject.CompareTag("Player2") && P2B.Blocking == false)
         {
             Rigidbody2D enemRB = P2.GetComponent<Rigidbody2D>();
-            enemRB.velocity = new Vector2(0 , Knockback + KnockBackPlus);
+            enemRB.velocity = new Vector2(0, Knockback + KnockBackPlus);
             P2H.Health -= Damage;
             P2G.Steam += MeterGain;
             StartCoroutine(HS.Stun(HitStun));

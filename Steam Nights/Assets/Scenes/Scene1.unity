@@ -254,8 +254,8 @@ MonoBehaviour:
   HitStun: 8
   Damage: 34
   MeterGain: 16
-  P2G: {fileID: 591783277}
   KnockBackPlus: 0
+  P2G: {fileID: 591783277}
   Frames: {fileID: 1729598129}
   P2H: {fileID: 1479626830}
   Punch: {fileID: 102533870}
@@ -855,6 +855,7 @@ MonoBehaviour:
   HitStun: 6
   Damage: 18
   MeterGain: 8
+  KnockBackPlus: 0
   P1G: {fileID: 1479626832}
   Frames: {fileID: 1729598129}
   P1H: {fileID: 591783281}
@@ -2669,6 +2670,7 @@ MonoBehaviour:
   HitStun: 45
   Damage: 45
   MeterGain: 14
+  KnockBackPlus: 0
   P1G: {fileID: 1479626832}
   Frames: {fileID: 1729598129}
   P1H: {fileID: 591783281}
@@ -2940,6 +2942,7 @@ MonoBehaviour:
   HitStun: 22
   Damage: 30
   MeterGain: 11
+  KnockBackPlus: 0
   P1G: {fileID: 1479626832}
   Frames: {fileID: 1729598129}
   P1H: {fileID: 591783281}
@@ -3263,7 +3266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   P2: {fileID: 1479626827}
   P2B: {fileID: 1479626828}
-  P1H: {fileID: 0}
+  P1H: {fileID: 591783281}
   P2L: {fileID: 405855215}
   P2DL: {fileID: 1916268186}
   P2JL: {fileID: 333037329}
@@ -4230,6 +4233,7 @@ MonoBehaviour:
   HitStun: 22
   Damage: 30
   MeterGain: 11
+  KnockBackPlus: 0
   P1G: {fileID: 1479626832}
   Frames: {fileID: 1729598129}
   P1H: {fileID: 591783281}
@@ -4722,6 +4726,7 @@ MonoBehaviour:
   HitStun: 6
   Damage: 20
   MeterGain: 8
+  KnockBackPlus: 0
   P1G: {fileID: 1479626832}
   Frames: {fileID: 1729598129}
   P1H: {fileID: 591783281}
@@ -4940,8 +4945,8 @@ MonoBehaviour:
   HitStun: 24
   Damage: 30
   MeterGain: 16
-  P2G: {fileID: 591783277}
   KnockBackPlus: 0
+  P2G: {fileID: 591783277}
   Frames: {fileID: 1729598129}
   P2H: {fileID: 1479626830}
   Punch: {fileID: 1981323736}

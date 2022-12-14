@@ -15,7 +15,7 @@ public class Rounds : MonoBehaviour
     {
         if(P1W >= 5)
         {
-            //Go to P1 win screen
+            SceneManager.LoadScene("MarisaWinScene", LoadSceneMode.Single);
         }
         if(P2W >= 5)
         {
