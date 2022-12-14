@@ -83,6 +83,14 @@ public float horizontal;
                 }
             }
         }
+        if(transform.localScale > 0 && horizontal < 0)
+        {
+            //WalkingBackwards
+        }
+        if(transform.localScale < 0 && horizontal > 0)
+        {
+            //WalkingBackwards
+        }
     }
     private void FixedUpdate()
     {
