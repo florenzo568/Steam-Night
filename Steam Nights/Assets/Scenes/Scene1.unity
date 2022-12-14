@@ -647,11 +647,12 @@ MonoBehaviour:
   StartUp: 32
   Active: 8
   Recovery: 25
-  Knockback: 12
+  Knockback: 5
   HitStun: 90
   Damage: 150
   MeterGain: 0
   P2G: {fileID: 591783277}
+  KnockBackPlus: 0
   HB: {fileID: 235218481}
   Frames: {fileID: 1729598129}
   P2H: {fileID: 1479626830}
@@ -800,7 +801,7 @@ MonoBehaviour:
   P2: {fileID: 1479626822}
   P1GO: {fileID: 591783260}
   P1: {fileID: 591783265}
-  HS: {fileID: 0}
+  HS: {fileID: 1479626829}
 --- !u!1 &333037327
 GameObject:
   m_ObjectHideFlags: 0
@@ -1496,7 +1497,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6.77
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3710,12 +3711,13 @@ MonoBehaviour:
   StartUp: 11
   Active: 5
   Recovery: 43
-  Knockback: 12
+  Knockback: 4
   HitStun: 70
   IFrames: 16
   Damage: 90
   MeterGain: 50
   P2G: {fileID: 591783277}
+  KnockBackPlus: 0
   Frames: {fileID: 1729598129}
   P2H: {fileID: 1479626830}
   Punch: {fileID: 1559013298}
@@ -3962,7 +3964,7 @@ MonoBehaviour:
   StartUp: 12
   Active: 5
   Recovery: 16
-  Knockback: 7
+  Knockback: 3
   HitStun: 28
   Damage: 34
   MeterGain: 18
@@ -4134,7 +4136,7 @@ MonoBehaviour:
   StartUp: 15
   Active: 6
   Recovery: 25
-  Knockback: 16
+  Knockback: 6
   HitStun: 30
   Damage: 65
   MeterGain: 16
@@ -5060,4 +5062,4 @@ MonoBehaviour:
   P2: {fileID: 1479626822}
   P1GO: {fileID: 591783260}
   P1: {fileID: 591783265}
-  HS: {fileID: 0}
+  HS: {fileID: 1479626829}

@@ -13,6 +13,7 @@ public float StartUp;
     public float MeterGain;
     [SerializeField] P1Gauge P2G;
     private SpriteRenderer Sprite;
+    public float KnockBackPlus;
     public BoxCollider2D HB;
     [SerializeField] FramesToSec Frames;
     [SerializeField] P2Health P2H;
@@ -61,7 +62,7 @@ public float StartUp;
         if(other.gameObject.CompareTag("Player2") && P2B.Blocking == false)
         {
             Rigidbody2D enemRB = P2.GetComponent<Rigidbody2D>();
-            enemRB.velocity = new Vector2(Knockback, Knockback);
+            enemRB.velocity = new Vector2(Knockback * other.gameObject.transform.localScale.x + KnockBackPlus, Knockback + KnockBackPlus);
             P2H.Health -= Damage;
             P2G.Steam += MeterGain;
             StartCoroutine(HS.Stun(HitStun));

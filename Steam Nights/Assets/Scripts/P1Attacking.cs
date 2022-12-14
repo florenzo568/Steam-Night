@@ -93,5 +93,7 @@ public class P1Attacking : MonoBehaviour
         P1H.KnockBackPlus = P2H.Knock * 0.1f;
         P1DH.KnockBackPlus = P2H.Knock * 0.1f;
         P1JH.KnockBackPlus = P2H.Knock * 0.1f;
+        P1S1.KnockBackPlus = P2H.Knock * 0.1f;
+        P1S4.KnockBackPlus = P2H.Knock * 0.1f;
     }
 }
