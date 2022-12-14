@@ -39,9 +39,16 @@ public float horizontal;
         {
             return;
         }
-        horizontal = Input.GetAxisRaw("Horizontal");
+        if (canMove)
+        {
+            horizontal = Input.GetAxisRaw("Horizontal");
+        }
+        else
+        {
+            horizontal = 0;
+        }
 
-        if(Input.GetButtonDown("Jump") && IsGrounded() && canMove)
+            if (Input.GetButtonDown("Jump") && IsGrounded() && canMove)
         {
             animator.SetBool("MarisaJumping", true);
             rb.velocity = new Vector2(rb.velocity.x, JumpForce);

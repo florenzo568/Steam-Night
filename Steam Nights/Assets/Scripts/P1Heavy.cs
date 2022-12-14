@@ -46,10 +46,11 @@ public class P1Heavy : MonoBehaviour
     {
         P1.canDash = false;
         P1.canMove = false;
+        animator.SetBool("MarisaWalking", false);
         Debug.Log("StartUp");
         animator.SetBool("Marisa5HH", true);
         yield return new WaitForSeconds(Frames.Seconds(StartUp));
-        Sprite.enabled = true;
+        Sprite.enabled = false;
         HB.enabled = true;
         P1GO.GetComponent<Rigidbody2D>().AddForce(P1GO.transform.localScale.x * transform.right * Knockback * 0.5f, ForceMode2D.Impulse);
         Debug.Log("Active");

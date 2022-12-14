@@ -36,9 +36,16 @@ public float horizontal;
         {
             return;
         }
-        horizontal = Input.GetAxisRaw("Horizontal2");
+        if (canMove)
+        {
+            horizontal = Input.GetAxisRaw("Horizontal2");
+        }
+        else
+        {
+            horizontal = 0;
+        }
 
-        if(Input.GetKeyDown("up") && IsGrounded() && canMove)
+        if (Input.GetKeyDown("up") && IsGrounded() && canMove)
         {
             animator.SetBool("LeonJumping", true);
             rb.velocity = new Vector2(rb.velocity.x, JumpForce);
