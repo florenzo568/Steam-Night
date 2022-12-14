@@ -6,9 +6,10 @@ public class P1Blocking : MonoBehaviour
 {
     [SerializeField] P1Move P1;
     public bool Blocking;
+    public Animator animator;
     void Start()
     {
-        
+        animator = GameObject.FindGameObjectWithTag("Player1").GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -19,10 +20,12 @@ public class P1Blocking : MonoBehaviour
             if(Input.GetButton("Block"))
             {
                 Blocking = true;
+                animator.SetBool("MarisaBlocking", true);
             }
             else
             {
                 Blocking = false;
+                animator.SetBool("MarisaBlocking", false);
             }
         }
     }

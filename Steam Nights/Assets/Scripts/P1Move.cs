@@ -25,10 +25,11 @@ public float horizontal;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private P1Turning Turn;
     [SerializeField] P1Blocking P1B;
+    public Animator animator;
 
     void Start()
     {
-        
+        animator = GameObject.FindGameObjectWithTag("Player1").GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -42,14 +43,17 @@ public float horizontal;
 
         if(Input.GetButtonDown("Jump") && IsGrounded() && canMove)
         {
+            animator.SetBool("MarisaJumping", true);
             rb.velocity = new Vector2(rb.velocity.x, JumpForce);
         }
         if(Input.GetKeyDown("s") && IsGrounded())
         {
+            animator.SetBool("MarisaCrouching", true);
             crouch = true;
         }
         else if(Input.GetKeyUp("s") && IsGrounded())
         {
+            animator.SetBool("MarisaCrouching", false);
             crouch = false;
         }
 
@@ -83,13 +87,19 @@ public float horizontal;
                 }
             }
         }
-        if(transform.localScale.x > 0 && horizontal < 0)
+        if (transform.localScale.x > 0 && horizontal < 0)
         {
-            //WalkingBackwards
+            animator.SetBool("MarisaWalking", true);
         }
-        if(transform.localScale.x < 0 && horizontal > 0)
+        if (transform.localScale.x < 0 && horizontal > 0)
         {
-            //WalkingBackwards
+            Debug.Log("Backwards");
+            animator.SetBool("MarisaWalkingBack", true);
+        }
+        if (horizontal == 0)
+        {
+            animator.SetBool("MarisaWalking", false);
+            animator.SetBool("MarisaWalkingBack", false);
         }
     }
     private void FixedUpdate()
@@ -122,10 +132,12 @@ public float horizontal;
     {
         canDash = false;
         isDashing = true;
+        animator.SetBool("MarisaDash", true);
         float OgGravity = rb.gravityScale;
         rb.gravityScale = 0f;
         rb.velocity = new Vector2(horizontal * dashingPower, 0f);
         yield return new WaitForSeconds(dashingTime);
+        animator.SetBool("MarisaDash", false);
         rb.gravityScale = OgGravity;
         isDashing = false;
         yield return new WaitForSeconds(dashingCooldown);

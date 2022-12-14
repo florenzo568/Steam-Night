@@ -19,8 +19,10 @@ public float StartUp;
     [SerializeField] P2Move P2;
     [SerializeField] P1Blocking P1B;
     [SerializeField] P1HitStun HS;
+    public Animator animator;
     void Start()
     {
+        animator = GameObject.FindGameObjectWithTag("Player2").GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -37,12 +39,15 @@ public float StartUp;
         P2.canDash = false;
         P2.canMove = false;
         Debug.Log("StartUp");
+        animator.SetBool("LeonJumping", false);
+        animator.SetBool("LeonJH", true);
         yield return new WaitForSeconds(Frames.Seconds(StartUp));
         Instantiate(FireBall, FirePoint.position, Quaternion.identity);
         Debug.Log("Active");
         yield return new WaitForSeconds(Frames.Seconds(Active));
         Debug.Log("recovery");
         yield return new WaitForSeconds(Frames.Seconds(Recovery));
+        animator.SetBool("LeonJH", false);
         P2.canDash = true;
         P2.canMove = true;
     }

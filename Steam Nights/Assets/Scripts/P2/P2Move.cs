@@ -122,6 +122,7 @@ public float horizontal;
         rb.gravityScale = 0f;
         rb.velocity = new Vector2(horizontal * dashingPower, 0f);
         yield return new WaitForSeconds(dashingTime);
+        animator.SetBool("LeonDash", false);
         rb.gravityScale = OgGravity;
         isDashing = false;
         yield return new WaitForSeconds(dashingCooldown);

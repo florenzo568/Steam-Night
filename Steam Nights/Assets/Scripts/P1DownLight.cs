@@ -22,12 +22,14 @@ public class P1DownLight : MonoBehaviour
     [SerializeField] GameObject P1GO;
     [SerializeField] P1Move P1;
     [SerializeField] HitStun HS;
+    public Animator animator;
     void Start()
     {
         Sprite = Punch.GetComponent<SpriteRenderer>();
         Sprite.enabled = false;
         HB = Punch.GetComponent<BoxCollider2D>();
         HB.enabled = false;
+        animator = GameObject.FindGameObjectWithTag("Player1").GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -43,6 +45,8 @@ public class P1DownLight : MonoBehaviour
     {
         P1.canDash = false;
         P1.canMove = false;
+        animator.SetBool("MarisaCrouching", false);
+        animator.SetBool("Marisa2L", true);
         Debug.Log("StartUp");
         yield return new WaitForSeconds(Frames.Seconds(StartUp));
         Sprite.enabled = true;
@@ -53,6 +57,11 @@ public class P1DownLight : MonoBehaviour
         HB.enabled = false;
         Debug.Log("recovery");
         yield return new WaitForSeconds(Frames.Seconds(Recovery));
+        animator.SetBool("Marisa2L", false);
+        if (Input.GetKey("down"))
+        {
+            animator.SetBool("MarisaCrouching", true);
+        }
         P1.canDash = true;
         P1.canMove = true;
     }

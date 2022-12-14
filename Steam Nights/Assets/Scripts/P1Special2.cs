@@ -19,8 +19,10 @@ public class P1Special2 : MonoBehaviour
     [SerializeField] P1Move P1;
     [SerializeField] P2Blocking P2B;
     [SerializeField] HitStun HS;
+    public Animator animator;
     void Start()
     {
+        animator = GameObject.FindGameObjectWithTag("Player1").GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -37,12 +39,14 @@ public class P1Special2 : MonoBehaviour
         P1.canDash = false;
         P1.canMove = false;
         Debug.Log("StartUp");
+        animator.SetBool("MarisaSuper1", true);
         yield return new WaitForSeconds(Frames.Seconds(StartUp));
         Instantiate(FireBall, FirePoint.position, Quaternion.identity);
         Debug.Log("Active");
         yield return new WaitForSeconds(Frames.Seconds(Active));
         Debug.Log("recovery");
         yield return new WaitForSeconds(Frames.Seconds(Recovery));
+        animator.SetBool("MarisaSuper1", false);
         P1.canDash = true;
         P1.canMove = true;
     }

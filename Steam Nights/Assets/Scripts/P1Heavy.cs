@@ -23,12 +23,14 @@ public class P1Heavy : MonoBehaviour
     [SerializeField] P1Move P1;
     [SerializeField] P2Blocking P2B;
     [SerializeField] HitStun HS;
+    public Animator animator;
     void Start()
     {
         Sprite = Punch.GetComponent<SpriteRenderer>();
         Sprite.enabled = false;
         HB = Punch.GetComponent<BoxCollider2D>();
         HB.enabled = false;
+        animator = GameObject.FindGameObjectWithTag("Player1").GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -45,6 +47,7 @@ public class P1Heavy : MonoBehaviour
         P1.canDash = false;
         P1.canMove = false;
         Debug.Log("StartUp");
+        animator.SetBool("Marisa5HH", true);
         yield return new WaitForSeconds(Frames.Seconds(StartUp));
         Sprite.enabled = true;
         HB.enabled = true;
@@ -55,6 +58,7 @@ public class P1Heavy : MonoBehaviour
         HB.enabled = false;
         Debug.Log("recovery");
         yield return new WaitForSeconds(Frames.Seconds(Recovery));
+        animator.SetBool("Marisa5HH", false);
         P1.canDash = true;
         P1.canMove = true;
     }
