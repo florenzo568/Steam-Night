@@ -23,12 +23,14 @@ public class P2DownMedium : MonoBehaviour
     [SerializeField] P2Move P2;
     [SerializeField] P1Blocking P1B;
     [SerializeField] P1HitStun HS;
+    public Animator animator;
     void Start()
     {
         Sprite = Punch.GetComponent<SpriteRenderer>();
         Sprite.enabled = false;
         HB = Punch.GetComponent<BoxCollider2D>();
         HB.enabled = false;
+        animator = GameObject.FindGameObjectWithTag("Player2").GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -41,6 +43,8 @@ public class P2DownMedium : MonoBehaviour
     {
         P2.canDash = false;
         P2.canMove = false;
+        animator.SetBool("LeonCrouching", false);
+        animator.SetBool("Leon2M", true);
         Debug.Log("StartUp");
         yield return new WaitForSeconds(Frames.Seconds(StartUp));
         Sprite.enabled = true;
@@ -52,6 +56,11 @@ public class P2DownMedium : MonoBehaviour
         HB.enabled = false;
         Debug.Log("recovery");
         yield return new WaitForSeconds(Frames.Seconds(Recovery));
+        animator.SetBool("Leon2M", false);
+        if (Input.GetKey("down"))
+        {
+            animator.SetBool("LeonCrouching", true);
+        }
         P2.canDash = true;
         P2.canMove = true;
     }
