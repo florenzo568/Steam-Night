@@ -48,7 +48,7 @@ public class P2DownMedium : MonoBehaviour
         Debug.Log("StartUp");
         yield return new WaitForSeconds(Frames.Seconds(StartUp));
         Sprite.enabled = true;
-        HB.enabled = false;
+        HB.enabled = true;
         //P2GO.GetComponent<Rigidbody2D>().AddForce(P2GO.transform.localScale.x * -transform.right * Knockback, ForceMode2D.Impulse);
         Debug.Log("Active");
         yield return new WaitForSeconds(Frames.Seconds(Active));

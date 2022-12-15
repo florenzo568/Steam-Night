@@ -48,7 +48,7 @@ public class P2JumpLight : MonoBehaviour
         Debug.Log("StartUp");
         yield return new WaitForSeconds(Frames.Seconds(StartUp));
         Sprite.enabled = true;
-        HB.enabled = false;
+        HB.enabled = true;
         Debug.Log("Active");
         yield return new WaitForSeconds(Frames.Seconds(Active));
         Sprite.enabled = false;

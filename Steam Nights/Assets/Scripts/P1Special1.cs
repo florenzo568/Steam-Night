@@ -52,7 +52,7 @@ public class P1Special1 : MonoBehaviour
         animator.SetBool("MarisaInnate", true);
         yield return new WaitForSeconds(Frames.Seconds(StartUp));
         Sprite.enabled = true;
-        HB.enabled = false;
+        HB.enabled = true;
         P1GO.GetComponent<Rigidbody2D>().AddForce(P1GO.transform.localScale.x * transform.right * Knockback, ForceMode2D.Impulse);
         P1GO.GetComponent<Rigidbody2D>().AddForce(P1GO.transform.localScale.x * transform.up * Knockback * 2, ForceMode2D.Impulse);
         Debug.Log("Active");
