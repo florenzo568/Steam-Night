@@ -799,6 +799,7 @@ MonoBehaviour:
   P2G: {fileID: 591783277}
   Frames: {fileID: 1729598129}
   P2H: {fileID: 1479626830}
+  P2B: {fileID: 1479626828}
   Punch: {fileID: 307783122}
   P2: {fileID: 1479626822}
   P1GO: {fileID: 591783260}
@@ -3336,6 +3337,8 @@ MonoBehaviour:
   P2: {fileID: 1479626827}
   Blocking: 0
   animator: {fileID: 0}
+  High: 0
+  Low: 0
 --- !u!114 &1479626829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5314,6 +5317,7 @@ MonoBehaviour:
   Punch: {fileID: 2023782619}
   P2: {fileID: 1479626822}
   P1GO: {fileID: 591783260}
+  P2B: {fileID: 1479626828}
   P1: {fileID: 591783265}
   HS: {fileID: 1479626829}
   animator: {fileID: 591783283}

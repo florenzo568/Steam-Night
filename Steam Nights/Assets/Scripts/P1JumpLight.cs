@@ -20,6 +20,7 @@ public class P1JumpLight : MonoBehaviour
     [SerializeField] GameObject Punch;
     [SerializeField] GameObject P2;
     [SerializeField] GameObject P1GO;
+    [SerializeField] P2Blocking P2B;
     [SerializeField] P1Move P1;
     [SerializeField] HitStun HS;
     public Animator animator;
@@ -64,7 +65,7 @@ public class P1JumpLight : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player2"))
+        if (other.gameObject.CompareTag("Player2") && !P2B.High)
         {
             Rigidbody2D enemRB = P2.GetComponent<Rigidbody2D>();
             enemRB.velocity = new Vector2(0 , Knockback + KnockBackPlus);

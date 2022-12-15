@@ -17,6 +17,7 @@ public class P1DownLight : MonoBehaviour
     private BoxCollider2D HB;
     [SerializeField] FramesToSec Frames;
     [SerializeField] P2Health P2H;
+    [SerializeField] P2Blocking P2B;
     [SerializeField] GameObject Punch;
     [SerializeField] GameObject P2;
     [SerializeField] GameObject P1GO;
@@ -68,7 +69,7 @@ public class P1DownLight : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player2"))
+        if (other.gameObject.CompareTag("Player2") && !P2B.Low)
         {
             Rigidbody2D enemRB = P2.GetComponent<Rigidbody2D>();
             P2H.Health -= Damage;

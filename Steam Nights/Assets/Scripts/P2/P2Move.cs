@@ -104,9 +104,13 @@ public float horizontal;
         {
             rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
         }
-        else if (!canMove || P2B.Blocking == true)
+        else if (!canMove)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y);
+        }
+        if(P2B.Blocking == true)
+        {
+            rb.velocity = new Vector2(0 , rb.velocity.y);
         }
         if(crouch)
         {
