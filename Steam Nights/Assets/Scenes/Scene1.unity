@@ -1880,7 +1880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8963955dc38f6b14ca50996c8f37f8b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Steam: 0
+  Steam: 100
   Night: 0
 --- !u!114 &591783279
 MonoBehaviour:
