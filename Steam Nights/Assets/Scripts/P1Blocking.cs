@@ -22,13 +22,17 @@ public class P1Blocking : MonoBehaviour
             if(Input.GetButton("Block"))
             {
                 Blocking = true;
-                animator.SetBool("MarisaBlocking", true);
+                
                 if (P1.crouch == true)
                 {
+                    animator.SetBool("MarisaLowBlocking", true);
+                    animator.SetBool("MarisaBlocking", false);
                     Low = true;
                 }
                 if (P1.crouch == false)
                 {
+                    animator.SetBool("MarisaBlocking", true);
+                    animator.SetBool("MarisaLowBlocking", false);
                     High = true;
                 }
                 if (Low && High)
@@ -42,6 +46,7 @@ public class P1Blocking : MonoBehaviour
                 High = false;
                 Low = false;
                 animator.SetBool("MarisaBlocking", false);
+                animator.SetBool("MarisaLowBlocking", false);
             }
         }
     }
