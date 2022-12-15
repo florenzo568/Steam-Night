@@ -44,6 +44,14 @@ public float horizontal;
         {
             horizontal = 0;
         }
+        if (IsGrounded())
+        {
+            animator.SetBool("LeonJumping", false);
+        }
+        else
+        {
+            animator.SetBool("LeonJumping", true);
+        }
 
         if (Input.GetKeyDown("up") && IsGrounded() && canMove)
         {
