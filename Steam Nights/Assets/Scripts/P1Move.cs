@@ -47,6 +47,14 @@ public float horizontal;
         {
             horizontal = 0;
         }
+        if (IsGrounded())
+        {
+            animator.SetBool("MarisaJumping", false);
+        }
+        else
+        {
+            animator.SetBool("MarisaJumping", true);
+        }
 
             if (Input.GetButtonDown("Jump") && IsGrounded() && canMove)
         {
