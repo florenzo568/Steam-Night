@@ -22,6 +22,7 @@ public float StartUp;
     [SerializeField] GameObject P1GO;
     [SerializeField] P1Move P1;
     [SerializeField] P2Blocking P2B;
+    [SerializeField] AudioSource Sound;
     [SerializeField] HitStun HS;
     public Animator animator;
     void Start()
@@ -46,6 +47,7 @@ public float StartUp;
     {
         P1.canDash = false;
         P1.canMove = false;
+        Sound.Play(0);
         Debug.Log("StartUp");
         animator.SetBool("MarisaJumping", false);
         animator.SetBool("MarisaJM", true);
