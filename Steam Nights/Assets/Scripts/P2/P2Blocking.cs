@@ -23,13 +23,17 @@ public class P2Blocking : MonoBehaviour
             if(Input.GetButton("Block2"))
             {
                 Blocking = true;
-                animator.SetBool("LeonBlocking", true);
+                
                 if(P2.crouch == true)
                 {
                     Low = true;
+                    animator.SetBool("LeonLowBlocking", true);
+                    animator.SetBool("LeonBlocking", false);
                 }
-                if(P2.crouch == false)
+                if (P2.crouch == false)
                 {
+                    animator.SetBool("LeonBlocking", true);
+                    animator.SetBool("LeonLowBlocking", false);
                     High = true;
                 }
                 if(Low && High)
@@ -43,6 +47,7 @@ public class P2Blocking : MonoBehaviour
                 Low = false;
                 High = false;
                 animator.SetBool("LeonBlocking", false);
+                animator.SetBool("LeonLowBlocking", false);
             }
         }
     }
