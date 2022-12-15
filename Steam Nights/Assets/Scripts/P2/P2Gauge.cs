@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class P2Gauge : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class P2Gauge : MonoBehaviour
     public float Night;
     public int Ammo = 8;
     public int Hot;
+    public TextMeshProUGUI count;
     void Start()
     {
         
@@ -20,5 +22,6 @@ public class P2Gauge : MonoBehaviour
         {
             Steam = 100;
         }
+        count.text = Ammo.ToString();
     }
 }
