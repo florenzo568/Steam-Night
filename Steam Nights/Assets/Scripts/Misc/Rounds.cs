@@ -15,10 +15,14 @@ public class Rounds : MonoBehaviour
     {
         if(P1W >= 5)
         {
+            P1W = 0;
+            P2W = 0;
             SceneManager.LoadScene("MarisaWinScene", LoadSceneMode.Single);
         }
         if(P2W >= 5)
         {
+            P1W = 0;
+            P2W = 0;
             SceneManager.LoadScene("LeonWinScene", LoadSceneMode.Single);
         }
     }
