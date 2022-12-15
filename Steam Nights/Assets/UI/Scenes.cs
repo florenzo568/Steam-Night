@@ -42,4 +42,8 @@ public class Scenes : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
     }
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }
