@@ -52,7 +52,7 @@ public class P1Light : MonoBehaviour
         yield return new WaitForSeconds(Frames.Seconds(StartUp));
         Sound.Play(0);
         Sprite.enabled = false;
-        HB.enabled = true;
+        HB.enabled = false;
         P1GO.GetComponent<Rigidbody2D>().AddForce(P1GO.transform.localScale.x * transform.right * Knockback * 2, ForceMode2D.Impulse);
         Debug.Log("Active");
         yield return new WaitForSeconds(Frames.Seconds(Active));

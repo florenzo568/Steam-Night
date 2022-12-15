@@ -47,7 +47,7 @@ public class P2Medium : MonoBehaviour
         animator.SetBool("Leon5M", true);
         yield return new WaitForSeconds(Frames.Seconds(StartUp));
         Sprite.enabled = true;
-        HB.enabled = true;
+        HB.enabled = false;
         P2GO.GetComponent<Rigidbody2D>().AddForce(P2GO.transform.localScale.x * -transform.right * Knockback, ForceMode2D.Impulse);
         Debug.Log("Active");
         yield return new WaitForSeconds(Frames.Seconds(Active));
