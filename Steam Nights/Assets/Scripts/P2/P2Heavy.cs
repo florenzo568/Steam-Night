@@ -19,6 +19,7 @@ public class P2Heavy : MonoBehaviour
     [SerializeField] P2Move P2;
     [SerializeField] P1Blocking P1B;
     [SerializeField] P1HitStun HS;
+    [SerializeField] AudioSource Sound;
     public Animator animator;
     void Start()
     {
@@ -38,6 +39,7 @@ public class P2Heavy : MonoBehaviour
     {
         P2.canDash = false;
         P2.canMove = false;
+        Sound.Play(0);
         animator.SetBool("Leon5H", true);
         Debug.Log("StartUp");
         yield return new WaitForSeconds(Frames.Seconds(StartUp));

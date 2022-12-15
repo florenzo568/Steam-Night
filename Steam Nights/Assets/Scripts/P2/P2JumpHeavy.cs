@@ -19,6 +19,7 @@ public float StartUp;
     [SerializeField] P2Move P2;
     [SerializeField] P1Blocking P1B;
     [SerializeField] P1HitStun HS;
+    [SerializeField] AudioSource Sound;
     public Animator animator;
     void Start()
     {
@@ -38,6 +39,7 @@ public float StartUp;
     {
         P2.canDash = false;
         P2.canMove = false;
+        Sound.Play(0);
         Debug.Log("StartUp");
         animator.SetBool("LeonJumping", false);
         animator.SetBool("LeonJH", true);
