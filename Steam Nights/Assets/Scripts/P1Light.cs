@@ -23,6 +23,7 @@ public class P1Light : MonoBehaviour
     [SerializeField] P1Move P1;
     [SerializeField] P2Blocking P2B;
     [SerializeField] HitStun HS;
+    [SerializeField] AudioSource Sound;
     public Animator animator;
     void Start()
     {
@@ -49,6 +50,7 @@ public class P1Light : MonoBehaviour
         Debug.Log("StartUp");
         animator.SetBool("Marisa5L", true);
         yield return new WaitForSeconds(Frames.Seconds(StartUp));
+        Sound.Play(0);
         Sprite.enabled = false;
         HB.enabled = true;
         P1GO.GetComponent<Rigidbody2D>().AddForce(P1GO.transform.localScale.x * transform.right * Knockback * 2, ForceMode2D.Impulse);

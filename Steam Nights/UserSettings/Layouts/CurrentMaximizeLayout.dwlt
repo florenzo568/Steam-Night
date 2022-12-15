@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 107
+  controlID: 20320
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 81
+  controlID: 20321
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 82
+  controlID: 20322
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -441,9 +441,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1136.2891, y: 237.95811, z: 7.316738}
+    m_Target: {x: -6.647684, y: -2.3273401, z: 13.219246}
     speed: 2
-    m_Value: {x: 1136.2891, y: 237.95811, z: 7.316738}
+    m_Value: {x: -6.647684, y: -2.3273401, z: 13.219246}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -494,9 +494,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 858.2833
+    m_Target: 1.9595528
     speed: 2
-    m_Value: 858.2833
+    m_Value: 1.9595528
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -684,7 +684,7 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_SearchFilter:
-    m_NameFilter: scene
+    m_NameFilter: 
     m_ClassNames: []
     m_AssetLabels: []
     m_AssetBundleNames: []
@@ -696,22 +696,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Sprites/Level
     m_Globs: []
-    m_OriginalText: scene
+    m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Sprites/Level
   m_LastFoldersGridSize: -1
   m_LastProjectPath: O:\Not steam games\GitHub\Steam-Night\Steam Nights
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 84630000
-    m_LastClickedID: 25476
-    m_ExpandedIDs: 00000000846300008e630000
+    m_SelectedIDs: 04690000
+    m_LastClickedID: 26884
+    m_ExpandedIDs: 000000008463000090630000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -764,10 +764,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 8299ffff
-    m_LastClickedInstanceID: -26238
-    m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000826d0000a6630000d6890000
+    m_SelectedInstanceIDs: 4cd60000
+    m_LastClickedInstanceID: 54860
+    m_HadKeyboardFocusLastEvent: 0
+    m_ExpandedInstanceIDs: c6230000826d0000a6630000d6890000aece0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -847,7 +847,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 108
+  controlID: 20295
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -907,7 +907,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 8299ffffee9affff509cffff16acfffff4adffffe4aeffff60afffff36b0ffff7ab0ffffccb0ffff10b1ffff76b1ffffbab1fffffeb1ffff52b2ffff92b2ffffe4b2ffff2eb3ffff72b3ffffb6b3ffff06b4ffff58b5ffff9cb5ffffe0b5ffff24b6ffff68b6ffffbab6ffff04b7ffff48b7ffff44b9ffffd4b9ffff72bbffff7ed9ffff5ae3ffff2cfbffff8c9c0000909c0000749d0000feb2000074b3000076c10000a0c1000022c300004cc30000a6c3000026c5000030c5000042c500006cc5000088c50000
+      m_ExpandedIDs: a67bffffce8dffff4e8fffff1a90fffffa90ffff0c92ffffee9affff509cffff16acfffff4adffffe4aeffff60afffff36b0ffff7ab0ffffccb0ffff10b1ffff76b1ffffbab1fffffeb1ffff52b2ffff92b2ffffe4b2ffff2eb3ffff72b3ffffb6b3ffff06b4ffff58b5ffff9cb5ffffe0b5ffff24b6ffff68b6ffffbab6ffff04b7ffff48b7ffff44b9ffffd4b9ffff72bbffff7ed9ffff5ae3ffff2cfbffff8c9c0000909c0000749d0000feb2000074b3000076c10000a0c1000022c300004cc30000a6c300006cc5000064cd000068cd0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -991,8 +991,8 @@ MonoBehaviour:
     m_CachedPref: 160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -26238
-  m_LastVerticalScrollValue: 171
+  m_LastInspectedObjectInstanceID: 54860
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:

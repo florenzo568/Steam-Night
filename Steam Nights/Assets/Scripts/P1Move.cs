@@ -94,9 +94,18 @@ public float horizontal;
                 }
             }
         }
-        if (transform.localScale.x > 0 && horizontal < 0)
+        if (transform.localScale.x > 0 && horizontal > 0)
         {
             animator.SetBool("MarisaWalking", true);
+        }
+        if (transform.localScale.x < 0 && horizontal < 0)
+        {
+            animator.SetBool("MarisaWalking", true);
+        }
+        if (transform.localScale.x > 0 && horizontal < 0)
+        {
+            Debug.Log("Backwards");
+            animator.SetBool("MarisaWalkingBack", true);
         }
         if (transform.localScale.x < 0 && horizontal > 0)
         {
