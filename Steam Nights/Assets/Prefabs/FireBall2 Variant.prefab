@@ -9,16 +9,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 40279083505878070, guid: e7041b17efbc3694590dd99f8d2d56d2, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.32
+      value: 1.28
       objectReference: {fileID: 0}
     - target: {fileID: 40279083505878070, guid: e7041b17efbc3694590dd99f8d2d56d2, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.32
+      value: 1.28
       objectReference: {fileID: 0}
     - target: {fileID: 6918531042964072190, guid: e7041b17efbc3694590dd99f8d2d56d2, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: f169a69b888768d44906789625031d45, type: 3}
+      objectReference: {fileID: 21300000, guid: 77e77c5949240374999bd90ebdbdf3e7, type: 3}
     - target: {fileID: 7117152873674574614, guid: e7041b17efbc3694590dd99f8d2d56d2, type: 3}
       propertyPath: m_Name
       value: FireBall2 Variant
@@ -26,6 +26,14 @@ PrefabInstance:
     - target: {fileID: 8864375821753351542, guid: e7041b17efbc3694590dd99f8d2d56d2, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8864375821753351542, guid: e7041b17efbc3694590dd99f8d2d56d2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8864375821753351542, guid: e7041b17efbc3694590dd99f8d2d56d2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8864375821753351542, guid: e7041b17efbc3694590dd99f8d2d56d2, type: 3}
       propertyPath: m_LocalPosition.x
