@@ -7,6 +7,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 40279083505878070, guid: e7041b17efbc3694590dd99f8d2d56d2, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 40279083505878070, guid: e7041b17efbc3694590dd99f8d2d56d2, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 6918531042964072190, guid: e7041b17efbc3694590dd99f8d2d56d2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f169a69b888768d44906789625031d45, type: 3}
     - target: {fileID: 7117152873674574614, guid: e7041b17efbc3694590dd99f8d2d56d2, type: 3}
       propertyPath: m_Name
       value: FireBall2 Variant
@@ -76,7 +88,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player2: {fileID: 0}
+  P2G: {fileID: 0}
   P1H: {fileID: 0}
+  P1B: {fileID: 0}
+  Hot: 0
   Speed: 0.1
   Damage: 60
   Life: 3
