@@ -18,6 +18,7 @@ public class P1Attacking : MonoBehaviour
     [SerializeField] P1JumpHeavy P1JH;
     [SerializeField] P1Special1 P1S1;
     [SerializeField] P1Special4 P1S4;
+    [SerializeField] P1Gauge P1G;
     void Start()
     {
         
@@ -26,27 +27,31 @@ public class P1Attacking : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButton("Block") && Input.GetButtonDown("Fire1") && P1.IsGrounded() && P1B.Blocking == true && P1.crouch)
+        if (Input.GetButton("Block") && Input.GetButtonDown("Fire1") && P1.IsGrounded() && P1B.Blocking == true && P1.crouch && P1G.Steam >= 50)
         {
             Debug.Log("Special Innate");
             StartCoroutine(P1S1.Special());
             P1B.Blocking = false;
             P1.DragP = true;
+            P1G.Steam -= 50;
         }
-        if (Input.GetButton("Block") && Input.GetButtonDown("Fire1") && P1.IsGrounded() && P1B.Blocking == true && !P1.crouch && P1.canMove)
+        if (Input.GetButton("Block") && Input.GetButtonDown("Fire1") && P1.IsGrounded() && P1B.Blocking == true && !P1.crouch && P1.canMove && P1G.Steam >= 30 )
         {
             Debug.Log("Special 2");
             StartCoroutine(P1.GetComponent<P1Special2>().Special());
+            P1G.Steam -= 30;
         }
-        if (Input.GetButton("Block") && Input.GetButtonDown("Fire2") && P1.IsGrounded() && P1B.Blocking == true && !P1.crouch && P1.canMove)
+        if (Input.GetButton("Block") && Input.GetButtonDown("Fire2") && P1.IsGrounded() && P1B.Blocking == true && !P1.crouch && P1.canMove && P1G.Steam >= 50)
         {
             Debug.Log("Special 3");
             StartCoroutine(P1.GetComponent<P1Special3>().Special());
+            P1G.Steam -= 50;
         }
-        if (Input.GetButton("Block") && Input.GetButtonDown("Fire3") && P1.IsGrounded() && P1B.Blocking == true && !P1.crouch && P1.canMove)
+        if (Input.GetButton("Block") && Input.GetButtonDown("Fire3") && P1.IsGrounded() && P1B.Blocking == true && !P1.crouch && P1.canMove && P1G.Steam >= 100)
         {
             Debug.Log("Special 4");
             StartCoroutine(P1S4.Special());
+            P1G.Steam -= 100;
         }
         if (Input.GetButtonDown("Fire1") && P1.IsGrounded() && !Input.GetKey("s") && P1.canMove && P1B.Blocking == false)
         {

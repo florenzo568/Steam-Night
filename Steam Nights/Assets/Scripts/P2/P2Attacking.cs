@@ -29,21 +29,25 @@ public class P2Attacking : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButton("Block2") && Input.GetButtonDown("Fire4") && P2.IsGrounded() && P2B.Blocking == true && P2.crouch)
+        if (Input.GetButton("Block2") && Input.GetButtonDown("Fire4") && P2.IsGrounded() && P2B.Blocking == true && P2.crouch && P2G.Steam >= 30)
         {
             StartCoroutine(P2S1.Special());
+            P2G.Steam -= 30;
         }
-        if (Input.GetButton("Block2") && Input.GetButtonDown("Fire4") && P2.IsGrounded() && P2B.Blocking == true && !P2.crouch && P2.canMove)
+        if (Input.GetButton("Block2") && Input.GetButtonDown("Fire4") && P2.IsGrounded() && P2B.Blocking == true && !P2.crouch && P2.canMove && P2G.Steam >= 50)
         {
             StartCoroutine(P2S2.Special());
+            P2G.Steam -= 50;
         }
-        if (Input.GetButton("Block2") && Input.GetButtonDown("Fire5") && P2.IsGrounded() && P2B.Blocking == true && !P2.crouch && P2.canMove)
+        if (Input.GetButton("Block2") && Input.GetButtonDown("Fire5") && P2.IsGrounded() && P2B.Blocking == true && !P2.crouch && P2.canMove && P2G.Steam >= 50)
         {
             StartCoroutine(P2S3.Special());
+            P2G.Steam -= 50;
         }
-        if (Input.GetButton("Block2") && Input.GetButtonDown("Fire6") && P2.IsGrounded() && P2B.Blocking == true && !P2.crouch && P2.canMove)
+        if (Input.GetButton("Block2") && Input.GetButtonDown("Fire6") && P2.IsGrounded() && P2B.Blocking == true && !P2.crouch && P2.canMove && P2G.Steam >= 100)
         {
             StartCoroutine(P2S4.Special());
+            P2G.Steam -= 100;
         }
         if (Input.GetButtonDown("Fire4") && P2.IsGrounded() && !Input.GetKey("down") && P2.canMove && P2B.Blocking == false)
         {

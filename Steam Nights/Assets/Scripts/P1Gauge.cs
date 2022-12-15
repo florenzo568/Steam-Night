@@ -14,6 +14,9 @@ public class P1Gauge : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Steam >= 100)
+        {
+            Steam = 100;
+        }
     }
 }
