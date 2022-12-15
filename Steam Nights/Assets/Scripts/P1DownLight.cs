@@ -23,6 +23,7 @@ public class P1DownLight : MonoBehaviour
     [SerializeField] GameObject P1GO;
     [SerializeField] P1Move P1;
     [SerializeField] HitStun HS;
+    [SerializeField] AudioSource Sound;
     public Animator animator;
     void Start()
     {
@@ -46,6 +47,7 @@ public class P1DownLight : MonoBehaviour
     {
         P1.canDash = false;
         P1.canMove = false;
+        Sound.Play(0);
         animator.SetBool("MarisaCrouching", false);
         animator.SetBool("Marisa2L", true);
         Debug.Log("StartUp");

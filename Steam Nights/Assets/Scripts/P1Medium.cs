@@ -23,6 +23,7 @@ public class P1Medium : MonoBehaviour
     [SerializeField] P1Move P1;
     [SerializeField] P2Blocking P2B;
     [SerializeField] HitStun HS;
+    [SerializeField] AudioSource Sound;
     public Animator animator;
     void Start()
     {
@@ -46,6 +47,7 @@ public class P1Medium : MonoBehaviour
     {
         P1.canDash = false;
         P1.canMove = false;
+        Sound.Play(0);
         Debug.Log("StartUp");
         animator.SetBool("Marisa5H", true);
         yield return new WaitForSeconds(Frames.Seconds(StartUp));

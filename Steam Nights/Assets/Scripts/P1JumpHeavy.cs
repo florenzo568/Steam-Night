@@ -23,6 +23,7 @@ public class P1JumpHeavy : MonoBehaviour
     [SerializeField] P1Move P1;
     [SerializeField] P2Blocking P2B;
     [SerializeField] HitStun HS;
+    [SerializeField] AudioSource Sound;
     public Animator animator;
     void Start()
     {
@@ -46,6 +47,7 @@ public class P1JumpHeavy : MonoBehaviour
     {
         P1.canDash = false;
         P1.canMove = false;
+        Sound.Play(0);
         Debug.Log("StartUp");
         animator.SetBool("MarisaJumping", false);
         animator.SetBool("MarisaJH", true);

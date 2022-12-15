@@ -805,6 +805,7 @@ MonoBehaviour:
   P1GO: {fileID: 591783260}
   P1: {fileID: 591783265}
   HS: {fileID: 1479626829}
+  Sound: {fileID: 583637892}
   animator: {fileID: 591783283}
 --- !u!1 &333037327
 GameObject:
@@ -1307,7 +1308,7 @@ MonoBehaviour:
   P1: {fileID: 591783265}
   P2B: {fileID: 1479626828}
   HS: {fileID: 1479626829}
-  Sound: {fileID: 0}
+  Sound: {fileID: 583637892}
   animator: {fileID: 591783283}
 --- !u!1 &456092437
 GameObject:
@@ -1566,7 +1567,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.08535067, g: 0.10352143, b: 0.13207549, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1623,6 +1624,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 583637891}
+  - component: {fileID: 583637892}
   m_Layer: 0
   m_Name: Lights
   m_TagString: Untagged
@@ -1648,6 +1650,102 @@ Transform:
   m_Father: {fileID: 591783264}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &583637892
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583637890}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: c309294f5b2b9434e9e9fbb3ce175f06, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.747
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &591783260
 GameObject:
   m_ObjectHideFlags: 0
@@ -3997,7 +4095,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.04684058}
+  m_Offset: {x: -0.00010114908, y: 0.04684055}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4008,7 +4106,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.0936811}
+  m_Size: {x: 1.0646855, y: 1.0936811}
   m_EdgeRadius: 0
 --- !u!212 &1584545728
 SpriteRenderer:
@@ -4017,7 +4115,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1584545726}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -4294,6 +4392,7 @@ MonoBehaviour:
   P1: {fileID: 591783265}
   P2B: {fileID: 1479626828}
   HS: {fileID: 1479626829}
+  Sound: {fileID: 583637892}
   animator: {fileID: 591783283}
 --- !u!1 &1692493504
 GameObject:
@@ -5044,6 +5143,7 @@ MonoBehaviour:
   P1: {fileID: 591783265}
   P2B: {fileID: 1479626828}
   HS: {fileID: 1479626829}
+  Sound: {fileID: 583637892}
   animator: {fileID: 591783283}
 --- !u!1 &1909557917
 GameObject:
@@ -5361,6 +5461,7 @@ MonoBehaviour:
   P1GO: {fileID: 591783260}
   P1: {fileID: 591783265}
   P2B: {fileID: 1479626828}
+  Sound: {fileID: 583637892}
   HS: {fileID: 1479626829}
   animator: {fileID: 591783283}
 --- !u!1 &2023782619
