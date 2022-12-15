@@ -63,7 +63,7 @@ public class P2JumpMedium : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.CompareTag("Player1") && P1B.Blocking == false)
+        if(other.gameObject.CompareTag("Player1") && !P1B.High)
         {
             Rigidbody2D enemRB = P1.GetComponent<Rigidbody2D>();
             enemRB.velocity = new Vector2(Knockback * -other.gameObject.transform.localScale.x + KnockBackPlus, Knockback + KnockBackPlus);

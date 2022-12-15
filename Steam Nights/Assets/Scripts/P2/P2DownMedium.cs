@@ -67,7 +67,7 @@ public class P2DownMedium : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.CompareTag("Player1") && P1B.Blocking == false)
+        if(other.gameObject.CompareTag("Player1") && !P1B.Low)
         {
             Rigidbody2D enemRB = P1.GetComponent<Rigidbody2D>();
             enemRB.velocity = new Vector2(0, Knockback + KnockBackPlus);
