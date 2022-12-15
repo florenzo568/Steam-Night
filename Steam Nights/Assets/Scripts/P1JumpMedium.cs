@@ -52,7 +52,7 @@ public float StartUp;
         animator.SetBool("MarisaJumping", false);
         animator.SetBool("MarisaJM", true);
         yield return new WaitForSeconds(Frames.Seconds(StartUp));
-        Sprite.enabled = true;
+        Sprite.enabled = false;
         HB.enabled = false;
         //P1GO.GetComponent<Rigidbody2D>().AddForce(P1GO.transform.localScale.x * transform.right * Knockback * 2, ForceMode2D.Impulse);
         Debug.Log("Active");

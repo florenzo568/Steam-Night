@@ -51,7 +51,7 @@ public class P1Medium : MonoBehaviour
         Debug.Log("StartUp");
         animator.SetBool("Marisa5H", true);
         yield return new WaitForSeconds(Frames.Seconds(StartUp));
-        Sprite.enabled = true;
+        Sprite.enabled = false;
         HB.enabled = true;
         P1GO.GetComponent<Rigidbody2D>().AddForce(P1GO.transform.localScale.x * transform.right * Knockback * 2, ForceMode2D.Impulse);
         Debug.Log("Active");

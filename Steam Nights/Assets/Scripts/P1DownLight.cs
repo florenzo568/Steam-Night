@@ -52,7 +52,7 @@ public class P1DownLight : MonoBehaviour
         animator.SetBool("Marisa2L", true);
         Debug.Log("StartUp");
         yield return new WaitForSeconds(Frames.Seconds(StartUp));
-        Sprite.enabled = true;
+        Sprite.enabled = false;
         HB.enabled = true;
         Debug.Log("Active");
         yield return new WaitForSeconds(Frames.Seconds(Active));

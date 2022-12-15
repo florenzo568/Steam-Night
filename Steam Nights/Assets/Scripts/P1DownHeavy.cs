@@ -50,7 +50,7 @@ public class P1DownHeavy : MonoBehaviour
         animator.SetBool("Marisa2H", true);
         Debug.Log("StartUp");
         yield return new WaitForSeconds(Frames.Seconds(StartUp));
-        Sprite.enabled = true;
+        Sprite.enabled = false;
         HB.enabled = true;
         //P1GO.GetComponent<Rigidbody2D>().AddForce(P1GO.transform.localScale.x * transform.right * Knockback * 0.5f, ForceMode2D.Impulse);
         Debug.Log("Active");

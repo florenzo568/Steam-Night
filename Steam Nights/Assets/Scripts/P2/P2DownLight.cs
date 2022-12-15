@@ -47,7 +47,7 @@ public class P2DownLight : MonoBehaviour
         animator.SetBool("Leon2L", true);
         Debug.Log("StartUp");
         yield return new WaitForSeconds(Frames.Seconds(StartUp));
-        Sprite.enabled = true;
+        Sprite.enabled = false;
         HB.enabled = true;
         Debug.Log("Active");
         yield return new WaitForSeconds(Frames.Seconds(Active));

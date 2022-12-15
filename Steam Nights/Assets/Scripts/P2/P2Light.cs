@@ -46,7 +46,7 @@ public class P2Light : MonoBehaviour
         Debug.Log("StartUp");
         animator.SetBool("Leon5L", true);
         yield return new WaitForSeconds(Frames.Seconds(StartUp));
-        Sprite.enabled = true;
+        Sprite.enabled = false;
         HB.enabled = true;
         Debug.Log("Active");
         yield return new WaitForSeconds(Frames.Seconds(Active));

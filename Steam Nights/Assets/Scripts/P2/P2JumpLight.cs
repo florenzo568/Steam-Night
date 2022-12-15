@@ -47,7 +47,7 @@ public class P2JumpLight : MonoBehaviour
         animator.SetBool("LeonJL", true);
         Debug.Log("StartUp");
         yield return new WaitForSeconds(Frames.Seconds(StartUp));
-        Sprite.enabled = true;
+        Sprite.enabled = false;
         HB.enabled = true;
         Debug.Log("Active");
         yield return new WaitForSeconds(Frames.Seconds(Active));

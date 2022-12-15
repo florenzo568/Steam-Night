@@ -47,7 +47,7 @@ public class P2JumpMedium : MonoBehaviour
         animator.SetBool("LeonJumping", false);
         animator.SetBool("LeonJM", true);
         yield return new WaitForSeconds(Frames.Seconds(StartUp));
-        Sprite.enabled = true;
+        Sprite.enabled = false;
         HB.enabled = true;
         //P2GO.GetComponent<Rigidbody2D>().AddForce(P2GO.transform.localScale.x * -transform.right * Knockback, ForceMode2D.Impulse);
         Debug.Log("Active");

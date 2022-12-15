@@ -52,7 +52,7 @@ public class P1JumpHeavy : MonoBehaviour
         animator.SetBool("MarisaJumping", false);
         animator.SetBool("MarisaJH", true);
         yield return new WaitForSeconds(Frames.Seconds(StartUp));
-        Sprite.enabled = true;
+        Sprite.enabled = false;
         HB.enabled = true;
         //P1GO.GetComponent<Rigidbody2D>().AddForce(P1GO.transform.localScale.x * transform.right * Knockback * 0.5f, ForceMode2D.Impulse);
         Debug.Log("Active");

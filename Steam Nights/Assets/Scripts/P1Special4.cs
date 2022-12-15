@@ -48,7 +48,7 @@ public float StartUp;
         Debug.Log("StartUp");
         animator.SetBool("MarisaSuper3", true);
         yield return new WaitForSeconds(Frames.Seconds(StartUp));
-        Sprite.enabled = true;
+        Sprite.enabled = false;
         HB.enabled = true;
         Debug.Log("Active");
         yield return new WaitForSeconds(Frames.Seconds(Active));
