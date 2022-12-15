@@ -5,7 +5,7 @@ using UnityEngine;
 public class HealthDamage : MonoBehaviour
 {
     public int health;
-    public int maxHealth = 10;
+    public int maxHealth = 100;
 
     public HealthBar healthBar;
 
